@@ -16,13 +16,13 @@
       <br>
       <a href="https://discord.gg/EN76sMH" class="btn btn-default" style="background-color:#333; color:#fff">Discord Sunucusuna Katıl!</a>
       <br><br>
-      <% for (var i = 0; i < bot.yetkililer.length; i++) { %>
+      <% for (var i = 0; i < client.yetkililer.length; i++) { %>
       <% var yetkirenk %>
-      <% if (bot.webyetkililer.includes(bot.yetkililer[i])) { var yetkirenk = 'green' } %>
-      <% if (bot.sunucuyetkililer.includes(bot.yetkililer[i])) { var yetkirenk = 'blue' } %>
-      <img src="https://cdn.discordapp.com/avatars/<%=bot.users.get(bot.yetkililer[i]).id%>/<%=bot.users.get(bot.yetkililer[i]).avatar%>.png" class="rounded-circle">
+      <% if (client.webyetkililer.includes(client.yetkililer[i])) { var yetkirenk = 'green' } %>
+      <% if (client.sunucuyetkililer.includes(client.yetkililer[i])) { var yetkirenk = 'blue' } %>
+      <img src="https://cdn.discordapp.com/avatars/<%=client.users.get(client.yetkililer[i]).id%>/<%=client.users.get(client.yetkililer[i]).avatar%>.png" class="rounded-circle">
       <h5 style="color:<%=yetkirenk%>">
-       <%=bot.users.get(bot.yetkililer[i]).tag%>
+       <%=client.users.get(client.yetkililer[i]).tag%>
       </h5>
       <% } %>
 </div>
