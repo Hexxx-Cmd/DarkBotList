@@ -624,10 +624,10 @@ app.get("/api/botlar/:botID/oylar/:kullaniciID", (req, res) => {
 
 app.listen(3000);
 
-};
-
 //Blog
 
 app.get("/blog", (req, res) => {
   res.redirect('/');
 });
+  
+};

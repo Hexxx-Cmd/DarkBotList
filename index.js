@@ -14,9 +14,9 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "rSTcor5nW5WFBinJ7Pud5JcLyrNn08Kg", //bot secreti
-	"callbackURL": "http://localhost:3000/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "kanal ID", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "oauthSecret": "deRFPYo5avrTsv7zjuwkHZGzyEm6irB4", //bot secreti
+	"callbackURL": "https://db-tr.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "547057591352819712", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
