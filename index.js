@@ -20,9 +20,9 @@ client.ayarlar = {
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
-client.yetkililer = [] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = [] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = [] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = [382489796192370689] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = [382489796192370689] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = [382489796192370689] //sunucu yetkililerin ıdleri gelcek array
 
 client.on('ready', async () => {
    client.appInfo = await client.fetchApplication();
@@ -149,7 +149,7 @@ client.on("message", async message => {
 		}
 		if (cmd.conf.permLevel === 4) {
 			const x = await client.fetchApplication()
-      var arr = [x.owner.id, '474239666032476200']
+      var arr = [x.owner.id, '382489796192370689']
 			if (!arr.includes(message.author.id)) {
 				const embed = new Discord.RichEmbed()
 					.setDescription(`Bu komutu tekrar deneme hiç çünkü sadece sahibim çalıştırabiliyor komutu büyülü komut.`)
@@ -181,7 +181,7 @@ client.on("message", async message => {
 	}
 });
 
-client.login("NTQwOTAyNDYwNzQ3Njc3NzE2.D0tNAw.u3p8wZku0LpB5i44xZkQokifCLU") //tokeni yaz işte
+client.login("NTMxODcyNzU0NTM0OTczNDUx.D0xN9g.OT71QxHHc7VOivfeUY7odzIeovQ") //tokeni yaz işte
 
 process.env = {}
 process.env.TOKEN = "NTQwOTAyNDYwNzQ3Njc3NzE2.D0tNAw.u3p8wZku0LpB5i44xZkQokifCLU"
