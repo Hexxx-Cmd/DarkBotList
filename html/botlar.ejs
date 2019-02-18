@@ -1,0 +1,103 @@
+<%- include('ek/header', {bot, user, path}) %>
+
+<div class="container">
+
+<h3 align="center" style="color:#222">
+    <strong>Tüm Botlar
+    </strong></h3>
+  <div align="center"><p>Burada sistemdeki tüm botlar yer almaktadır. <br>(Botlar oy sayısına göre orantılı olarak sıralanmaktadır.)</p></div>
+  <br>
+    
+  <div align="center">
+    <input type="search" placeholder="Bot ara..." id="ara" name="ara">
+    <br>
+     <div class="select-style">
+    <select id="etiketselect">
+      <option disabled selected>Bir etiket seçiniz.</option>
+      <option value="noneFilter">Filtre kapat</option>
+      <option value="Moderasyon">Moderasyon</option>
+      <option value="Müzik">Müzik</option>
+      <option value="Ayarlar">Ayarlar</option>
+      <option value="Eğlence">Eğlence</option>
+      <option value="Web Panel">Web Panel</option>
+    </select>
+</div>
+    
+    <p style="color:#333">
+      <a style="color:red">Not:</a> Botları bot adını, kütüphanesini, kısa açıklamasını, sahip adını ve etiketlerini yazarak aratabilirsiniz.<br>Botların etiketlerini seçerekte etiket üzerinden bot aratabilirsiniz. 
+    </p>
+    
+  </div>
+  <br><br><br>
+    
+  <div class="row">
+  
+   <% if (bot.ayar.has('botlar')) { %>
+  <% const sorted = Object.keys(bot.ayar.fetch('botlar')).sort((a, b) => { return (bot.ayar.fetch(`botlar.${b}.oy`) || 0) - (bot.ayar.fetch(`botlar.${a}.oy`) || 0) }) %>
+  <% const top = sorted.splice(0, Object.keys(bot.ayar.fetch('botlar')).length) %>
+  <% const map = top.map(x=>x) %>
+	<% for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) { %>
+  <% let idd = map[i] %>
+   <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
+		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
+    <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
+    <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
+  
+          <a name="aramaResim" id="aramaResim" href="/bot/<%=idd%>" style="color:#fff"><img value="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>" src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" style="width:100%" alt="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a>
+        
+          <% if(bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
+       
+       <br><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"> Sertifikalı</a><br>
+       <% } %>
+       <div class="badge badge-primary"><strong style='color: white;'>Oy: </strong><span style='color:whitesmoke;text-transform: none;'><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></span></div>
+                    <div class="badge badge-success"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
+                     
+          </div>
+      <div align="center" style="background-color:#fff" class="card-body">
+                               <div class="card-title">
+                                  <h4><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
+                                <h6 style="font-size:17px; color:#222"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></h6></div>         
+                        
+                              <p class="card-text" style="color:#222"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
+                              <span id="etiketler"><%=bot.ayar.fetch(`botlar.${idd}.etiket`).join(' | ')%></span>
+                               <hr>
+                              <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#fff">Görüntüle</a> <b style="color:grey">|</b> 
+                              <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:#222; background-color:#fff">Davet Et</a></h6>
+                            </div>
+                       </div><br>
+    </div>
+      <% } %>
+    <% } %>
+   <% } %>
+   <% } else {%>
+   <center><h5 style="color:#222">
+     Sistemde hiç bot bulunmuyor.
+     </h5></center>
+   <% } %>
+   </div></div></div></div>
+
+<script>
+$(document).ready(function(){
+ $("#ara").keyup(function(){
+    var value = $(this).val().toLowerCase();
+    $(".col-12, .col-sm-6, .col-md-4 .card").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+  //etiket filtresi
+  $("#etiketselect").change(function(){
+    var value = $(this).val();
+    if (value === 'noneFilter') {
+      window.location.reload(true);
+      return
+    }
+    $(".col-12, .col-sm-6, .col-md-4 .card").filter(function(){
+      $(this).toggle($(this).text().indexOf(value) > -1)
+    });
+  })
+  ;
+});
+</script>
+  
+<% include ./ek/footer %>

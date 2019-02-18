@@ -1,0 +1,30 @@
+<%- include('ek/header', {bot, user, path}) %>
+<div class="container">
+<style> h3 { color:#fff; } p { color:#fff; } </style>
+	<div class="jumbotron">
+		<div align="center">
+      <h3 style="color:#fff">
+        Hakkımızda
+      </h3>
+		   <p style="font-size:15px; color:lightgrey">
+        Merhaba! Ben <i>Ceyhun</i>. Discord adım ile <i>💀Ceyhun#9569</i>.
+        DiscordBotsTR sistemini yapma amacım Türkiye'deki Discord botlarının toplanacağı bir yandan da reklamlarının yapılacağı bir alan oluşturmaktır.
+        Discord botunuz var ise sitemize ekleyerek ve Discord botu olan arkadaşlarınıza sitemizi tavsiye edip sitemize yönlendirerek hiç bir maddi durum olmadan ve bize hiç bir
+        kazanç sağlamadan destek olabilirsiniz. Üstüne basarak söyler isem, gerçekten herhangi bir kazancımız olmuyor olmayacak. Her sistemi, projeyi insanların yararı adına
+        yapıyorum ve yapacağım! 
+      </p>
+      <br>
+      <a href="https://discord.gg/EN76sMH" class="btn btn-default" style="background-color:#333; color:#fff">Discord Sunucusuna Katıl!</a>
+      <br><br>
+      <% for (var i = 0; i < bot.yetkililer.length; i++) { %>
+      <% var yetkirenk %>
+      <% if (bot.webyetkililer.includes(bot.yetkililer[i])) { var yetkirenk = 'green' } %>
+      <% if (bot.sunucuyetkililer.includes(bot.yetkililer[i])) { var yetkirenk = 'blue' } %>
+      <img src="https://cdn.discordapp.com/avatars/<%=bot.users.get(bot.yetkililer[i]).id%>/<%=bot.users.get(bot.yetkililer[i]).avatar%>.png" class="rounded-circle">
+      <h5 style="color:<%=yetkirenk%>">
+       <%=bot.users.get(bot.yetkililer[i]).tag%>
+      </h5>
+      <% } %>
+</div>
+  </div></div></div>
+<% include ./ek/footer %>

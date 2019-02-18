@@ -1,0 +1,28 @@
+<%- include('ek/header', {bot, user, path}) %>
+<div class="container">
+  <style> body { background-color:#4c4c4c; } strong { color:#00bc3b; } h3 { color:#fff; } p { color:#fff; } </style>
+  <div align="center"><br>
+    <div class="jumbotron" style="background-color:#222; border-radius:40px;">
+  <h3 style="color:#fff">
+    DiscordBotsTR - API
+  </h3>
+		<br><br><br>
+      <h4 style="color:#fff">
+        <strong>GET</strong> /botlar/{bot_id}
+      </h4>
+		   <p style="color:lightgrey">
+         Sistemimizde bulunan ID'ini belirttiğiniz bir botun sistemdeki bilgilerini gösterir.<br>
+         <i>Örnek link; <a href="/api/botlar/508662605175455754">https://tr-discordbotlar.cf/api/botlar/508662605175455754</a></i>
+      </p>
+      <br><br>
+      <h4 style="color:#fff">
+        <strong>GET</strong> /botlar/{bot_id}/oylar/{user_id}
+      </h4>
+		   <p style="color:lightgrey">
+         Sistemimizde bulunan ID'ini belirttiğiniz bir bota ID'ini belirttiğiniz kullanıcı gün içerisinde oy vermiş mi vermemiş mi bunu gösterir. Oy vermemiş ise null yazar.<br>
+         <i>Örnek link; <a href="/api/botlar/508662605175455754/oylar/486817385051979786">https://tr-discordbotlar.cf/api/botlar/508662605175455754/oylar/486817385051979786</a></i>
+      </p>
+      <br><br>
+</div>
+  </div></div></div>
+<% include ./ek/footer %>

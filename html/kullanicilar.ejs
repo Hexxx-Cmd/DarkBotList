@@ -1,0 +1,19 @@
+<%- include('ek/header') %>
+
+  <div align="center">
+      <div class="jumbotron">
+        <% for (var i = 0; i < Object.keys(bot.profil); i++) { %>
+          <% var id = Object.keys(bot.profil)[i] %>
+          <% if (bot.profil[id]) { %>
+        <img src="<%=bot.profil[id].avatar%>" class="rounded-circle">
+        <br>
+        <a href="/kullanici/<%=id%>" class="btn btn-default" style="background-color:#333; color:#fff"><%=bot.profil[id].tag%> kullanıcı sayfasına git!</a>
+        <br>
+        <a href="/kullanici/<%=id%>/profil" class="btn btn-default" style="background-color:#333; color:#fff"><%=bot.profil[i].tag%> profil sayfasına git!</a>
+        <br><br>
+          <% } %>
+        <% } %>
+      </div>
+  </div>
+
+<%- include ./ek/footer %>
