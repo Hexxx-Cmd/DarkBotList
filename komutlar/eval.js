@@ -33,7 +33,7 @@ exports.run = async (client, message, args) => {
 	const evalEmbed = new Discord.RichEmbed().setColor(client.ayarlar.renk)
 	try {
 		var evaled = clean(await eval(code));
-		if(evaled.startsWith('NDc4O')) evaled = tokenuyari;
+		if(evaled.startsWith('NTQ3M')) evaled = tokenuyari;
 		if (evaled.constructor.name === 'Promise') evalEmbed.setDescription(`\`\`\`\n${evaled}\n\`\`\``)
 		else evalEmbed.setDescription(`\`\`\`js\n${evaled}\n\`\`\``)
 		const newEmbed = new Discord.RichEmbed()
