@@ -413,11 +413,11 @@ let ayar = req.body
 
 if(ayar['mesaj-1']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-1']}" }`))
-client.channels.get('519863157464760321').send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` adlı botu raporladı! \n**Sebep:** \`${ayar['mesaj-1']}\``)
+client.channels.get('547345613969162254').send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` adlı botu raporladı! \n**Sebep:** \`${ayar['mesaj-1']}\``)
 }
 if(ayar['mesaj-2']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-2']}" }`))
-client.channels.get('519863157464760321').send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` adlı botu raporladı! \n**Sebep:** \`${ayar['mesaj-2']}\``)
+client.channels.get('547345613969162254').send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` adlı botu raporladı! \n**Sebep:** \`${ayar['mesaj-2']}\``)
 }
 
 res.redirect('/bot/'+req.params.botID);
