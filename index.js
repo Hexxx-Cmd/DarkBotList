@@ -13,10 +13,10 @@ let profil = JSON.parse(fs.readFileSync('./profil.json', 'utf8'))
 client.profil = profil
 
 client.ayarlar = {
-  "prefix": "!!", //prefix
+  "prefix": "!", //prefix
   "oauthSecret": "eSCTluLefbKnhVU2WyJoI3lhSCfvQD_k", //bot secreti
 	"callbackURL": "https://fiboxbotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+	"kayıt": "547345613969162254", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
