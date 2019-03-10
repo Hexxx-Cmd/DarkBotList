@@ -1,1 +1,1 @@
-scarew bunu çaldı çünkü scarew mal.
+AyamIngiliz
