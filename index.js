@@ -14,8 +14,8 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "", //bot secreti
-	"callbackURL": "https:/video-site.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+  "oauthSecret": "i5YUFxEi59DYlXT5lOp9sU3pQ3B07BeH", //bot secreti
+	"callbackURL": "https://disscordbots-trs.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
@@ -175,7 +175,7 @@ client.on("message", async message => {
 	}
 });
 
-client.login("") //tokeni yaz işte
+client.login("NTg0NzYzMjk4NzA5MjQxODY2.XPPpSA.mQ6HKg0itqWGCAkibsxgXEbFkK8") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "";
+process.env.TOKEN = "NTg0NzYzMjk4NzA5MjQxODY2.XPPpSA.mQ6HKg0itqWGCAkibsxgXEbFkK8";
