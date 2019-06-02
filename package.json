@@ -4,7 +4,7 @@
   "//3": "updating this file will download and update your packages",
   "name": "hello-express",
   "version": "0.0.1",
-  "description": "scarew bunu çaldı çünkü scarew mal.",
+  "description": "Video site by mert.",
   "main": "app.js",
   "scripts": {
     "start": "node index.js"

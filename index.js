@@ -14,9 +14,9 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "eSCTluLefbKnhVU2WyJoI3lhSCfvQD_k", //bot secreti
-	"callbackURL": "https://fiboxbotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "547345613969162254", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "oauthSecret": "", //bot secreti
+	"callbackURL": "https:/video-site.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
@@ -58,14 +58,6 @@ if (db.has(`oylar.${bot}.${user}`)) {
 	}
 
 }, 10000);
-
-client.on("guildMemberAdd", member => {
-      if (member.user.bot === true) {
-          member.addRole(member.guild.roles.find(r=>r.name==='Bot').id) //bot rolü
-       } else {
-          member.addRole(member.guild.roles.find(r=>r.name==='Kullanıcı').id) //üye rolü
-       }
-});
 
 const chalk = require('chalk')
 
@@ -183,7 +175,7 @@ client.on("message", async message => {
 	}
 });
 
-client.login("token") //tokeni yaz işte
+client.login("") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "token";
+process.env.TOKEN = "";
