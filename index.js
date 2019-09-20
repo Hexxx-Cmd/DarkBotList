@@ -14,10 +14,10 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "i5YUFxEi59DYlXT5lOp9sU3pQ3B07BeH", //bot secreti
-	"callbackURL": "https://disscordbots-trs.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+  "oauthSecret": "wtyDDjOt4iCujcN09H9RNF675qAuo5EP", //bot secreti
+	"callbackURL": "https://cubebotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
-  "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
+  "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 client.yetkililer = ["430011871555223553"] //tüm yetkililerin ıdleri gelcek array
