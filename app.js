@@ -217,7 +217,7 @@ db.set(`kbotlar.${req.user.id}.${ID}`, db.fetch(`botlar.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botu ile başvuru yaptı!`)
+client.channels.get(client.ayarlar.kayıt).send(`[\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${sistem.id}\` ID'SİNE SAHİP \`${sistem.username}#${sistem.discriminator}\` ADLI BOTU İLE BAŞVURU YAPTI]`)
 
 if (client.users.has(req.user.id) === true) {
   client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` adlı botunuz başarıyla sistemimize eklendi! Şimdi, tek yapmanız gereken şey oturup sıcak bir kahvenin yanında botun onaylanmasını beklemektir.\n İyi şanslar! 🎉`)
