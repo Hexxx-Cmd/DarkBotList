@@ -1,11 +1,11 @@
 body {
-	background: #fff;
+	background: #0c76b0;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
 
 .jumbotron {
-  background-color:#555; 
+  background-color:#fff; 
   width:100%;
 }
 
@@ -16,13 +16,13 @@ h6:link, h6:visited {
 
 .topnav {
 	overflow: hidden;	
-	background-color: #333;
+	background-color: #fff1;
 }
 
 .topnav a {
 	float: left;
 	display: block;
-	color: #f2f2f2;
+	color: #fff;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;

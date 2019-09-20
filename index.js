@@ -16,13 +16,13 @@ client.ayarlar = {
   "prefix": "!", //prefix
   "oauthSecret": "wtyDDjOt4iCujcN09H9RNF675qAuo5EP", //bot secreti
 	"callbackURL": "https://cubebotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+	"kayıt": "624643138178383903", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
-client.yetkililer = ["430011871555223553"] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ["430011871555223553"] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ["430011871555223553"] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ["621749124890361866"] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ["621749124890361866"] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ["621749124890361866"] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 
@@ -34,7 +34,7 @@ client.on('ready', async () => {
   
    require("./app.js")(client);
   
-  client.user.setActivity(`${client.ayarlar.prefix}yardım`, { type:"PLAYING" })
+  client.user.setActivity(`!yardım | cubebotlist`, { type:"PLAYING" })
   
   console.log("Aktif!")
 });
@@ -167,7 +167,7 @@ client.on("message", async message => {
 					.setDescription(`Bu komutu özel mesajlarda kullanamazsın.`)
 					.setColor(client.ayarlar.renk)
 					.setTimestamp()
-				message.channel.send("Bu komutu özel mesajlarda kullanamazsın.")
+				message.channel.send("[BU KOMUT ÖZEL MESAJLARDA DEVRE DIŞIDIR]")
 				return
 			}
 		}
@@ -175,7 +175,7 @@ client.on("message", async message => {
 	}
 });
 
-client.login("NTg0NzYzMjk4NzA5MjQxODY2.XPPpSA.mQ6HKg0itqWGCAkibsxgXEbFkK8") //tokeni yaz işte
+client.login("NjI0NjQwMzg2NjkzOTg4MzUz.XYT_YA.6hA0Hyv-6aDwPK7Norbl7m68MDI") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "NTg0NzYzMjk4NzA5MjQxODY2.XPPpSA.mQ6HKg0itqWGCAkibsxgXEbFkK8";
+process.env.TOKEN = "NjI0NjQwMzg2NjkzOTg4MzUz.XYT_YA.6hA0Hyv-6aDwPK7Norbl7m68MDI";
