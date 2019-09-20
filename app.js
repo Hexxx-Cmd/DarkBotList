@@ -505,10 +505,10 @@ db.set(`botlar.${id}.durum`, 'Onaylı')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` BURA NERE \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU ONAYLANDI`)
+client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP BOTU ONAYLANDI`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` adlı botunuz onaylandı! \n https://discordbotstr.xyz/bot/${db.fetch(`botlar.${id}.id`)}`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ ONAYLANI \n https://cubebotlist.glitch.me/ /bot/${db.fetch(`botlar.${id}.id`)}`)
 }
 
 });
@@ -521,10 +521,10 @@ db.set(`botlar.${id}.durum`, 'Beklemede')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı yetkili tarafından \`${db.fetch(`botlar.${id}.sahip`)}\` adlı kullanıcının \`${db.fetch(`botlar.${id}.id`)}\` ID'ine sahip \`${db.fetch(`botlar.${id}.isim`)}\` adlı botu bekleme moduna alındı!`)
+client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU İNCELENMEYE ALINDI`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` adlı botunuz beklemeye/incelenmeye alındı!`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ SERTİFİKA İNCELENMESİNE ALINDI`)
 }
 
 });
@@ -542,10 +542,10 @@ app.post("/botyonetici/reddet/:botID", checkAuth, (req, res) => {
   
   res.redirect("/yetkili")
   
-  client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı yetkili tarafından \`${db.fetch(`botlar.${id}.sahip`)}\` adlı kullanıcının \`${db.fetch(`botlar.${id}.id`)}\` ID'ine sahip \`${db.fetch(`botlar.${id}.isim`)}\` adlı botu \`${req.body['red-sebep']}\` sebebi ile reddedildi!`)
+  client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI YETKİLİ TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
   
   if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-  client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` adlı botunuz \`${req.body['red-sebep']}\` sebebi ile reddedildi!`)
+  client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
   }
 
   });
