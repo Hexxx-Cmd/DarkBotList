@@ -3,8 +3,8 @@
 <div class="post post-single">
                   <br>
                         <div class="post-meta">
-                            <div align="center"><span class="yapimci"><i class="fa fa-clock-o"></i> <strong>Yapımcı: </strong><%=bot.ayar.fetch(`botlar.${id}.sahip`)%></span><a style="color:#222"> | </a>
-                            <span class="oy"><a class="oy"><i class="fa fa-star"></i> <%=bot.ayar.fetch(`botlar.${id}.oy`) || 0%> Oy</a></span>
+                            <div align="center"><span class="yapimci"><i class="fa fa-clock-o"></i> <strong>YAPIMCI </strong><%=bot.ayar.fetch(`botlar.${id}.sahip`)%></span><a style="color:#222"> | </a>
+                            <span class="oy"><a class="oy"><i class="fa fa-star"></i> <%=bot.ayar.fetch(`botlar.${id}.oy`) || 0%></a></span>
                         <% if(bot.ayar.has(`botlar.${id}.sertifika`) === true) { %>
                             | <span><img src="https://cdn2.iconfinder.com/data/icons/rewards-1/512/medal-512.png" width="20px" height="20px"> <a style="color:darkorange">Sertifikalı</a></span>
                          <% } %>
@@ -46,32 +46,7 @@
           <% } %>
         <% } %>
                       
-                </div>  
-  </div>
-  <br>
-  <div class="uzunaciklama" class="jimbotron" align="center"><br>
-    <% if (bot.ayar.has(`botlar.${id}.uzunaciklama`) || bot.ayar.fetch(`botlar.${id}.uzunaciklama`) !== undefined || bot.ayar.fetch(`botlar.${id}.uzunaciklama`) !== null) { %>
-<% var xx %>
-<% for (var ii = 0; ii < bot.tags.length; ii++) { %>
-  <% if(bot.ayar.fetch(`botlar.${id}.uzunaciklama`).includes(bot.tags[ii]) === false) {%>
-    <% xx = false %>
- <% } %>
-    <% if (bot.ayar.fetch(`botlar.${id}.uzunaciklama`).includes(bot.tags[ii]) === true) { %>
-     <% x = true %>
-    <% } %>
-<% } %>
-
-<% if (x === false) { %>
-  <p><%=bot.ayar.fetch(`botlar.${id}.uzunaciklama`)%></p>
-<% } else if (x === true) { %>
-    <% let $ = bot.htmll.load(bot.ayar.fetch(`botlar.${id}.uzunaciklama`)) %>
-  <%- $.html() %>
-    <% } %>
-    
-    <% } else { %>
-    <p>Bir Discord botu işte!</p>
-    <% } %>
-    
+ 
   <br></div>
         
         </div><br>

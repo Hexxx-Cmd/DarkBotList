@@ -140,22 +140,18 @@
      <a id="top" name="top"></a>
  
 <div class="topnav" id="myTopnav">
-			<a href="/" class="active">Ana Sayfa</a>
-      <a href="/botlar">Botlar</a>
-			<a href="/api">API</a>
-			<a href="/blog" onclick="alert('Blog henüz bulunmamaktadır. Yapım aşamasındadır.')">Blog</a>
-			<a href="/hakkimizda">Hakkımızda</a>
+			<a href="/">ANA SAYFA</a>
+      <a href="/botlar">BOTLAR</a>
+			<a href="/hakkimizda">DİSCORD</a>
 			<% if (!user) { %>
-      <a href="/giris">Giriş Yap</a>
+      <a href="/giris">GİRİŞ YAP</a>
       <% } else { %>
-      <a href="/botekle">Bot Ekle</a>
-			<a href="/cikis">Çıkış Yap</a>
-			<a href="/kullanici/<%=user.id%>">
-      <img src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png?size=32" width="25" height="25" class="d-inline-block align-middle rounded-circle" alt="Kullanıcı Avatar">
-      <%=user.username%>
+      <a href="/botekle">BOT EKLE</a>
+			<a href="/cikis">ÇIKIŞ YAP</a>
+
       </a>
       <% if (bot.yetkililer.includes(user.id) === true) { %>
-      <a href="/yetkili">Yetkili Paneli</a>
+      <a href="/yetkili">YETKİLİ</a>
       <% } %>
       <% } %>	
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
