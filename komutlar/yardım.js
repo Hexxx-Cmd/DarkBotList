@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args) => {
 	//kendi URL'lerini eklersn :D
   var embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setAuthor("DiscordBotsTR", client.user.avatarURL)
+  .setColor('BLUE')
+  .setAuthor("CUBE BOT LİST", client.user.avatarURL)
   .addField("Sistemin amacı nedir? Sistem ne işe yaramaktadır?", "Gerekli bilgiyi [buraya tıklayarak](https://discordbotstr.xyz/hakkimizda) görebilirsiniz.")
 	.addField("Bot nasıl ekleyeceğim?", "[Buraya tıklayarak](https://discordbotstr.xyz/botekle) bot ekleyebileceğiniz yere ışınlanabilirsiniz.")
   .addField("Sistemdeki tüm botları nereden görebilirim?", "[Buraya tıklayarak](https://discordbotstr.xyz/botlar) görebilirsiniz.")
