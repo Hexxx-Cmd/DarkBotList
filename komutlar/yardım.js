@@ -5,11 +5,7 @@ exports.run = async (client, message, args) => {
   var embed = new Discord.RichEmbed()
   .setColor('BLUE')
   .setAuthor("CUBE BOT LİST", client.user.avatarURL)
-  .addField("Sistemin amacı nedir? Sistem ne işe yaramaktadır?", "Gerekli bilgiyi [buraya tıklayarak](https://discordbotstr.xyz/hakkimizda) görebilirsiniz.")
-	.addField("Bot nasıl ekleyeceğim?", "[Buraya tıklayarak](https://discordbotstr.xyz/botekle) bot ekleyebileceğiniz yere ışınlanabilirsiniz.")
-  .addField("Sistemdeki tüm botları nereden görebilirim?", "[Buraya tıklayarak](https://discordbotstr.xyz/botlar) görebilirsiniz.")
-  .addField("Sertifika ne işe yarar? Nasıl alınır?", "[Buraya tıklayarak](https://discordbotstr.xyz/sertifika) görebilirsiniz.")
-  .addField("Kullanıcı panelinde neler yapılabilir?", "Kullanıcı panelinde sistemdeki botlarınızın profilini/başvurusunu düzenleyebilir ve botlarınızı sistemden silebilirsiniz. \nKullanıcı paneline gitmek için [buraya tıklayabilirsiniz.](https://discordbotstr.xyz/panel)")
+  .addField("SİTEMİZ https://cubebotlist.glitch.me")
   message.channel.send({embed: embed})
   
 };
