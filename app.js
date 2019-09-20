@@ -217,7 +217,7 @@ db.set(`kbotlar.${req.user.id}.${ID}`, db.fetch(`botlar.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`[\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${sistem.id}\` ID'SİNE SAHİP \`${sistem.username}#${sistem.discriminator}\` ADLI BOTU İLE BAŞVURU YAPTI]`)
+client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${sistem.id}\` ID'SİNE SAHİP \`${sistem.username}#${sistem.discriminator}\` ADLI BOTU İLE BAŞVURU YAPTI`)
 
 if (client.users.has(req.user.id) === true) {
   client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` ADLI BOTUNUZ SİSTEME BAŞVURDU TEK YAPMANIZ GEREKEN BEKLEMEK`)
@@ -391,10 +391,10 @@ db.set(`botlar.${ID}.destek`, ayar['botdestek'])
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botunun başvurusunu/profilini düzenlendi!`)
+client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${sistem.id}\` ID'SİNE SAHİP \`${sistem.username}#${sistem.discriminator}\` ADLI PROFİLİ/BAŞVUSUNU DÜZENLEDİ`)
 
 if (client.users.has(req.user.id) === true) {
-client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` adlı botunuzun profili/başvurusu başarıyla düzenlendi!`)
+client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` ADLI KULLANICI PROFİLİNİ/BAŞVURUSUNU DÜZENLEDİ`)
 }
 
 }})
@@ -413,11 +413,11 @@ let ayar = req.body
 
 if(ayar['mesaj-1']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-1']}" }`))
-client.channels.get('624643138178383903').send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` adlı botu raporladı! \n**Sebep:** \`${ayar['mesaj-1']}\``)
+client.channels.get('624643138178383903').send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-1']}\``)
 }
 if(ayar['mesaj-2']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-2']}" }`))
-client.channels.get('624643138178383903').send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` adlı botu raporladı! \n**Sebep:** \`${ayar['mesaj-2']}\``)
+client.channels.get('624643138178383903').send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-2']}\``)
 }
 
 res.redirect('/bot/'+req.params.botID);
