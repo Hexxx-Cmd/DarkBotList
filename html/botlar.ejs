@@ -24,7 +24,7 @@
 </div>
     
     <p style="color:#333">
-      <a style="color:red">Not:</a> Botları bot adını, kütüphanesini, kısa açıklamasını, sahip adını ve etiketlerini yazarak aratabilirsiniz.<br>Botların etiketlerini seçerekte etiket üzerinden bot aratabilirsiniz. 
+      <a style="color:red"></a> <br>
     </p>
     
   </div>
@@ -48,7 +48,7 @@
         
           <% if(bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
        
-       <br><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"> Sertifikalı</a><br>
+       <br><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"> SERTİFİKALI</a><br>
        <% } %>
        <div class="badge badge-primary"><strong style='color: white;'>Oy: </strong><span style='color:whitesmoke;text-transform: none;'><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></span></div>
                     <div class="badge badge-success"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
@@ -62,8 +62,8 @@
                               <p class="card-text" style="color:#222"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
                               <span id="etiketler"><%=bot.ayar.fetch(`botlar.${idd}.etiket`).join(' | ')%></span>
                                <hr>
-                              <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#fff">Görüntüle</a> <b style="color:grey">|</b> 
-                              <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:#222; background-color:#fff">Davet Et</a></h6>
+                              <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#fff">GÖRÜNTÜLE</a> <b style="color:grey">|</b> 
+                              <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:#222; background-color:#fff">DAVET ET</a></h6>
                             </div>
                        </div><br>
     </div>
@@ -72,7 +72,6 @@
    <% } %>
    <% } else {%>
    <center><h5 style="color:#222">
-     Sistemde hiç bot bulunmuyor.
      </h5></center>
    <% } %>
    </div></div></div></div>
