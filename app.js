@@ -217,10 +217,10 @@ db.set(`kbotlar.${req.user.id}.${ID}`, db.fetch(`botlar.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${sistem.id}\` ID'SİNE SAHİP \`${sistem.username}#${sistem.discriminator}\` ADLI BOTU İLE BAŞVURU YAPTI`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${sistem.username}#${sistem.discriminator}\` ADLI BOTU İLE BAŞVURU YAPTI`)
 
 if (client.users.has(req.user.id) === true) {
-  client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` ADLI BOTUNUZ SİSTEME BAŞVURDU TEK YAPMANIZ GEREKEN BEKLEMEK`)
+  client.users.get(req.user.id).send(`✔️ | \`${sistem.username}#${sistem.discriminator}\` ADLI BOTUNUZ SİSTEME BAŞVURDU TEK YAPMANIZ GEREKEN BEKLEMEK`)
 }
 
 }})
@@ -391,10 +391,10 @@ db.set(`botlar.${ID}.destek`, ayar['botdestek'])
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${sistem.id}\` ID'SİNE SAHİP \`${sistem.username}#${sistem.discriminator}\` ADLI PROFİLİ/BAŞVUSUNU DÜZENLEDİ`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${sistem.username}#${sistem.discriminator}\` ADLI PROFİLİ/BAŞVUSUNU DÜZENLEDİ`)
 
 if (client.users.has(req.user.id) === true) {
-client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` ADLI KULLANICI PROFİLİNİ/BAŞVURUSUNU DÜZENLEDİ`)
+client.users.get(req.user.id).send(`✔️ | \`${sistem.username}#${sistem.discriminator}\` ADLI KULLANICI PROFİLİNİ/BAŞVURUSUNU DÜZENLEDİ`)
 }
 
 }})
@@ -413,11 +413,11 @@ let ayar = req.body
 
 if(ayar['mesaj-1']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-1']}" }`))
-client.channels.get('624643138178383903').send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-1']}\``)
+client.channels.get('624643138178383903').send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-1']}\``)
 }
 if(ayar['mesaj-2']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-2']}" }`))
-client.channels.get('624643138178383903').send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-2']}\``)
+client.channels.get('624643138178383903').send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-2']}\``)
 }
 
 res.redirect('/bot/'+req.params.botID);
@@ -505,10 +505,10 @@ db.set(`botlar.${id}.durum`, 'Onaylı')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP BOTU ONAYLANDI`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU ONAYLANDI`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ ONAYLANI \n https://cubebotlist.glitch.me/ /bot/${db.fetch(`botlar.${id}.id`)}`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ ONAYLANI`)
 }
 
 });
@@ -521,10 +521,10 @@ db.set(`botlar.${id}.durum`, 'Beklemede')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU İNCELENMEYE ALINDI`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ  \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU İNCELENMEYE ALINDI`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ SERTİFİKA İNCELENMESİNE ALINDI`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ SERTİFİKA İNCELENMESİNE ALINDI`)
 }
 
 });
@@ -542,7 +542,7 @@ app.post("/botyonetici/reddet/:botID", checkAuth, (req, res) => {
   
   res.redirect("/yetkili")
   
-  client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` ADLI YETKİLİ TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
+  client.channels.get(client.ayarlar.kayıt).send(`❌ | \`${req.user.username}#${req.user.discriminator}\` ADLI YETKİLİ TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
   
   if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
   client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
