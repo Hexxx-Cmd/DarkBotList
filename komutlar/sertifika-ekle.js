@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
   }
   
   message.channel.send(`BAŞARIYLA \`${args[0]}\` ID'Lİ BOT SERİTİFİKALI OLDU`)
-  client.channels.get(client.ayarlar.kayıt).send(`\`${message.author.tag}\` ADLI YETKİLİ TARAFINDAN \`${db.fetch(`botlar.${args[0]}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${args[0]}.isim`)}\` ADLI BOTUNA SERTİFİKA VERİLDİ`)
+  client.channels.get(client.ayarlar.kayıt).send(`✔️ |  \`${db.fetch(`botlar.${args[0]}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${args[0]}.isim`)}\` ADLI BOTUNA SERTİFİKA VERİLDİ`)
 	
   db.set(`botlar.${args[0]}.sertifika`, "Bulunuyor")
   
@@ -50,7 +50,7 @@ exports.conf = {
 }
 
 exports.help = {
-	name: 'sertifika-ekle',
+	name: 'sertifika-ver',
 	description: 'Yazılan ID\'deki botu sertifikalı yapar.',
 	usage: 'sertifika-ekle [ID]'
 }
