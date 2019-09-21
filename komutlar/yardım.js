@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   var embed = new Discord.RichEmbed()
   .setColor('BLUE')
   .setAuthor("CUBE BOT LİST", client.user.avatarURL)
-  .addField("SİTEMİZ http://www.cubebotlist.cf",)
+  .addField("SİTEMİZ https://cubebotlist.glitch.me/",)
   message.channel.send({embed: embed})
   
 };

@@ -24,7 +24,16 @@ client.yetkililer = ["621749124890361866","404206792005124096"] //tüm yetkilile
 client.webyetkililer = ["621749124890361866","404206792005124096"] //web yetkililerin ıdleri gelcek array
 client.sunucuyetkililer = ["621749124890361866","404206792005124096"] //sunucu yetkililerin ıdleri gelcek array
 
-//["id", "id2"]
+//
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === '!js') {  // İstediğiniz Komut
+       msg.member.addRole("624868772020355124"); //Rolü bir yerde bahsedin sonra sağ tıklayıp İD'sini alın
+    msg.channel.send("**JS ROLÜ ALINDI**"); //Komutu Yazınca cevap ne yazsın?
+  }
+});
+
+//
 
 client.on('ready', async () => {
    client.appInfo = await client.fetchApplication();
@@ -34,7 +43,7 @@ client.on('ready', async () => {
   
    require("./app.js")(client);
   
-  client.user.setActivity(`!yardım | cubebotlist`, { type:"PLAYING" })
+  client.user.setActivity(`!yardım | !js`, { type:"PLAYING" })
   
   console.log("Aktif!")
 });

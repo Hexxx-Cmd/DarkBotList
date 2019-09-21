@@ -14,8 +14,7 @@
                             <div align="center"><img src="<%=bot.ayar.fetch(`botlar.${id}.avatar`)%>"
                                 width="300" height="300" class="botavatar"><h3 class="botisim"><%=bot.ayar.fetch(`botlar.${id}.isim`)%></h3><h5 class="kisaaciklama"><%=bot.ayar.fetch(`botlar.${id}.kisaaciklama`)%></h5></div>
                           
-        <div alig ="left">
-          <button class="botprefix btn btn-default"><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></button>
+        
           
       <%if (bot.ayar.has(`botlar.${id}.destek`)){%>
                  <a href="<%=bot.ayar.fetch(`botlar.${id}.destek`)%>"><button class="btn btn-warning destek">DESTEK SUNUCU</button></a>
