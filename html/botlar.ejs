@@ -41,7 +41,7 @@
    <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
 		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
     <div class="col-12 col-sm-6 col-md-4">
-        <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
+        <div class="card card-lg botcard" style="background-color:#0c76b0; width:16rem;">
     <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
   
           <a name="aramaResim" id="aramaResim" href="/bot/<%=idd%>" style="color:#fff"><img value="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>" src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" style="width:100%" alt="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a>
@@ -54,7 +54,7 @@
                     <div class="badge badge-success"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
                      
           </div>
-      <div align="center" style="background-color:#fff" class="card-body">
+      <div align="center" style="background-color:#0c76b0" class="card-body">
                                <div class="card-title">
                                   <h4><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
                                 <h6 style="font-size:17px; color:#222"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></h6></div>         
@@ -62,8 +62,8 @@
                               <p class="card-text" style="color:#222"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
                               <span id="etiketler"><%=bot.ayar.fetch(`botlar.${idd}.etiket`).join(' | ')%></span>
                                <hr>
-                              <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#fff">GÖRÜNTÜLE</a> <b style="color:grey">|</b> 
-                              <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:#222; background-color:#fff">DAVET ET</a></h6>
+                              <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#0c76b0">GÖRÜNTÜLE</a> <b style="color:grey">|</b> 
+                              <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:#222; background-color:#0c76b0">DAVET ET</a></h6>
                             </div>
                        </div><br>
     </div>
