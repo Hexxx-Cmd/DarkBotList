@@ -146,11 +146,12 @@
       <a href="/giris">GİRİŞ YAP</a>
       <% } else { %>
       <a href="/botekle">BOT EKLE</a>
-			<a href="/cikis">ÇIKIŞ YAP</a>
+			<a href="/yetkili">YETKİLİ</a>
+      <a href="/sertifika">SERTİFİKA</a>
 
       </a>
       <% if (bot.yetkililer.includes(user.id) === true) { %>
-      <a href="/yetkili">YETKİLİ</a>
+      <a href="/cikis">ÇIKIŞ YAP</a>
       <% } %>
       <% } %>	
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
