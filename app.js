@@ -508,7 +508,7 @@ res.redirect("/yetkili")
 client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU ONAYLANDI`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ ONAYLANI`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ ONAYLANDI`)
 }
 
 });
@@ -521,7 +521,7 @@ db.set(`botlar.${id}.durum`, 'Beklemede')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ  \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU İNCELENMEYE ALINDI`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ  \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU İNCELENMEYE ALINDI`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
 client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ SERTİFİKA İNCELENMESİNE ALINDI`)
@@ -542,10 +542,10 @@ app.post("/botyonetici/reddet/:botID", checkAuth, (req, res) => {
   
   res.redirect("/yetkili")
   
-  client.channels.get(client.ayarlar.kayıt).send(`❌ | \`${req.user.username}#${req.user.discriminator}\` ADLI YETKİLİ TARAFINDAN \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.id`)}\` ID'SİNE SAHİP \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
+  client.channels.get(client.ayarlar.kayıt).send(`❌ | \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
   
   if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-  client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
+  client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`❌ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
   }
 
   });
