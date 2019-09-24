@@ -23,11 +23,11 @@
        <% } %>
 
       <%  if(bot.ayar.fetch(`botlar.${idd}.durum`) === 'Beklemede' || !bot.ayar.has(`botlar.${idd}.durum`)) { %>
-       <div class="badge badge-warning">Beklemede</div>
+       <div class="badge badge-warning">BEKLEMEDE</div>
        <% } %>
 
        <%  if(bot.ayar.fetch(`botlar.${idd}.durum`) === 'Reddedilmiş') { %>
-       <div class="badge badge-danger">REDDED</div>
+       <div class="badge badge-danger">REDDEDİLMİŞ</div>
        <% } %>
 
        <%  if(bot.ayar.fetch(`botlar.${idd}.durum`) === 'Onaylı') { %>
@@ -44,9 +44,9 @@
                         
                               <p class="card-text" style="color:#222"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
                                <hr>
-                               <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#fff">Görüntüle</a> <b style="color:grey">|</b> 
-                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/duzenle" style="font-size:20px; color:#222; background-color:#fff">Düzenle</a> <b style="color:grey">|</b> 
-                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/sil" style="font-size:20px; color:#222; background-color:#fff">Sil</a></h6>                          
+                               <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#7289DA">GÖRÜNTÜLE</a> <b style="color:grey">|</b> 
+                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/duzenle" style="font-size:20px; color:#222; background-color:#7289DA">DÜZENLE</a> <b style="color:grey">|</b> 
+                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/sil" style="font-size:20px; color:#222; background-color#7289DA">SİL</a></h6>                          
                             </div>
                        </div><br>
    </div>
