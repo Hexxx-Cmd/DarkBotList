@@ -26,12 +26,49 @@ client.sunucuyetkililer = ["621749124890361866","404206792005124096","3782184975
 
 //
 
-client.on('message', msg => {
-  if (msg.content.toLowerCase() === '!js') {  // İstediğiniz Komut
-       msg.member.addRole("624868772020355124"); //Rolü bir yerde bahsedin sonra sağ tıklayıp İD'sini alın
-    msg.channel.send("**JS ROLÜ ALINDI**"); //Komutu Yazınca cevap ne yazsın?
+client.on("guildMemberAdd", async member => {
+        let sayac = JSON.parse(fs.readFileSync("./jsonlar/otorol.json", "utf8"));
+  let otorole =  JSON.parse(fs.readFileSync("./jsonlar/otorol.json", "utf8"));
+      let arole = otorole[member.guild.id].sayi
+  let giriscikis = JSON.parse(fs.readFileSync("./jsonlar/otorol.json", "utf8"));  
+  let embed = new Discord.RichEmbed()
+    .setTitle('OTOROL SİSTEMİ')
+    .setDescription(`SUNUCUYA HOŞGELDİN \`@${member.user.tag}\` OTOMATİK ROL VERİLDİ`)
+.setColor("ORANGE")
+    .setFooter("HBOT", client.user.avatarURL);
+
+  if (!giriscikis[member.guild.id].kanal) {
+    return;
   }
+
+  try {
+    let giriscikiskanalID = giriscikis[member.guild.id].kanal;
+    let giriscikiskanali = client.guilds.get(member.guild.id).channels.get(giriscikiskanalID);
+    let embed = new Discord.RichEmbed()
+   .setTitle('OTOROL SİSTEMİ')
+    giriscikiskanali.send(`》<a:DOLUYOR:623950994115395604> | SUNUCUYA HOŞGELDİN \`@${member.user.tag}\` OTOMATİK ROL VERİLDİ《`);
+  } catch (e) { // eğer hata olursa bu hatayı öğrenmek için hatayı konsola gönderelim.
+    return console.log(e)
+  }
+
+  //let embed = new Discord.RichEmbed()
+   // .setTitle('OTOROL SİSTEMİ')
+    //.setDescription(`》<a:DOLUYOR:623950994115395604> | SUNUCUYA HOŞGELDİN \`@${member.user.tag}\` OTOMATİK ROL VERİLDİ《`)
+//.setColor("ORANGE")
+    //.setFooter("HBOT", client.user.avatarURL);
+  
 });
+
+client.on("guildMemberAdd", async (member) => {
+      let autorole =  JSON.parse(fs.readFileSync("./jsonlar/otorol.json", "utf8"));
+      let role = autorole[member.guild.id].sayi
+
+      member.addRole(role)
+
+});
+
+
+
 
 //
 
