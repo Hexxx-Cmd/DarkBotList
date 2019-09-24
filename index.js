@@ -14,10 +14,10 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "wtyDDjOt4iCujcN09H9RNF675qAuo5EP", //bot secreti
-	"callbackURL": "https://cubebotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+  "oauthSecret": "f45yvsfPDYXp_rca1pED6B4SznUbWhcV", //bot secreti
+	"callbackURL": "https://discordbotlist-ga.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "624643138178383903", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
-  "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
+  "renk": "#7289DA" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 client.yetkililer = ["621749124890361866","404206792005124096","378218497571815435"] //tüm yetkililerin ıdleri gelcek array
@@ -43,7 +43,7 @@ client.on('ready', async () => {
   
    require("./app.js")(client);
   
-  client.user.setActivity(`!yardım | !js`, { type:"PLAYING" })
+  client.user.setActivity(`BOŞ DA BOŞ`, { type:"PLAYING" })
   
   console.log("Aktif!")
 });
@@ -184,7 +184,7 @@ client.on("message", async message => {
 	}
 });
 
-client.login("NjI0NjQwMzg2NjkzOTg4MzUz.XYT_YA.6hA0Hyv-6aDwPK7Norbl7m68MDI") //tokeni yaz işte
+client.login("NjI2MDgzODc4ODI1NjIzNTcy.XYo8Hg.ex8OE-2K-tGWFj5wsRs2-DO0LiU") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "NjI0NjQwMzg2NjkzOTg4MzUz.XYT_YA.6hA0Hyv-6aDwPK7Norbl7m68MDI";
+process.env.TOKEN = "NjI2MDgzODc4ODI1NjIzNTcy.XYo8Hg.ex8OE-2K-tGWFj5wsRs2-DO0LiU";
