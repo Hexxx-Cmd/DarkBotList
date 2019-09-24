@@ -5,7 +5,7 @@
     var txt = `${kisi.username}#${kisi.discriminator} adlı kullanıcının profilini görmek için tıkla`
     if (user) {
       if (user.id === kisi.id) {
-        var txt = `Profilini görmek için tıkla`
+        var txt = `PROFİLİNİ GÖRMEK İÇİN TIKLA`
       }
     }
     %>
@@ -14,7 +14,7 @@
        <a href="/kullanici/<%=kisi.id%>/profil" class="btn btn-default" style="background-color:#333; color:#fff"><%=txt%></a>
        <% if (user) { %>
        <% if (user.id === kisi.id) { %>
-       <a href="/kullanici/<%=kisi.id%>/panel" class="btn btn-default" style="background-color:#333; color:#fff">Panele gitmek için tıkla</a>
+       <a href="/kullanici/<%=kisi.id%>/panel" class="btn btn-default" style="background-color:#333; color:#fff">PANELE GİTMEK İÇİN TIKLA</a>
        <% } %>
        <% } %>
   </div>
