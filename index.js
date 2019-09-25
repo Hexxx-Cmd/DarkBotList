@@ -15,7 +15,7 @@ client.profil = profil
 client.ayarlar = {
   "prefix": "!", //prefix
   "oauthSecret": "f45yvsfPDYXp_rca1pED6B4SznUbWhcV", //bot secreti
-	"callbackURL": "https://discordbotlist-ga.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"callbackURL": "https://discordbotlist.ga/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "626099569238736896", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "#7289DA" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
