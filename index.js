@@ -46,7 +46,7 @@ client.on("guildMemberAdd", async member => {
     let giriscikiskanali = client.guilds.get(member.guild.id).channels.get(giriscikiskanalID);
     let embed = new Discord.RichEmbed()
    .setTitle('OTOROL SİSTEMİ')
-    giriscikiskanali.send(`》<a:DOLUYOR:623950994115395604> | SUNUCUYA HOŞGELDİN \`@${member.user.tag}\` OTOMATİK ROL VERİLDİ《`);
+    giriscikiskanali.send(`》SUNUCUYA HOŞGELDİN \`@${member.user.tag}\` OTOMATİK ROL VERİLDİ《`);
   } catch (e) { // eğer hata olursa bu hatayı öğrenmek için hatayı konsola gönderelim.
     return console.log(e)
   }
