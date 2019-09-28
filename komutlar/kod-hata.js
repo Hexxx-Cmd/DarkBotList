@@ -34,4 +34,4 @@ exports.help = {
   name: 'kod-hata',
   description: '',
   usage: ''
-};
+}
