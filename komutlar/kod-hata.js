@@ -19,7 +19,7 @@ const embed2 = new Discord.RichEmbed()
 .addField(`\nSUNUCU BİLGİLERİ`,` \nSUNUCU İSMİ: ${message.guild.name} \nSUNUCU ID: ${message.guild.id}`)
 .addField("HATALI KOD", type)
 .setThumbnail(message.author.avatarURL)
-client.channels.get('624870865804197936').send(embed2); // Kanal ID 
+client.channels.get('682575198536728606').send(embed2); // Kanal ID 
 
 };
 

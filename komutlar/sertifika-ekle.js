@@ -27,15 +27,15 @@ exports.run = async (client, message, args) => {
 	}
   
 	if (db.has('botlar')) {
-			if (Object.keys(db.fetch('botlar')).includes(args[0]) === false)  return message.reply("BU BOT SİSTEMDE BULUNMAMAKTA")
+			if (Object.keys(db.fetch('botlar')).includes(args[0]) === false)  return message.reply("THIS BOAT IS NOT AVAILABLE IN THE SYSTEM")
 	}
   
   if (db.has('botlar')) {
-  if (db.has(`botlar.${args[0]}.sertifika`) === true) return message.reply("BU BOT SERTİFİKALI ZATEN")
+  if (db.has(`botlar.${args[0]}.sertifika`) === true) return message.reply("THIS BOT CERTIFIED ALREADY")
   }
   
   message.channel.send(`BAŞARIYLA \`${args[0]}\` ID'Lİ BOT SERİTİFİKALI OLDU`)
-  client.channels.get(client.ayarlar.kayıt).send(`✔️ |  \`${db.fetch(`botlar.${args[0]}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${args[0]}.isim`)}\` ADLI BOTUNA SERTİFİKA VERİLDİ`)
+  client.channels.get(client.ayarlar.kayıt).send(`✔️ |  \`${db.fetch(`botlar.${args[0]}.sahip`)}\` USER'S \`${db.fetch(`botlar.${args[0]}.isim`)}\` CERTIFICATE GIVEN TO THE BOARD`)
 	
   db.set(`botlar.${args[0]}.sertifika`, "Bulunuyor")
   

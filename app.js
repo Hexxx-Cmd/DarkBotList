@@ -217,7 +217,7 @@ db.set(`kbotlar.${req.user.id}.${ID}`, db.fetch(`botlar.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${sistem.username}#${sistem.discriminator}\` ADLI BOTU İLE BAŞVURU YAPTI`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` USER \`${sistem.username}#${sistem.discriminator}\` Adding New Bot :new:`)
 
 if (client.users.has(req.user.id) === true) {
   client.users.get(req.user.id).send(`✔️ | \`${sistem.username}#${sistem.discriminator}\` YOUR BOAT HAS APPLIED THE SYSTEM ONLY WHAT YOU SHOULD DO`)
@@ -542,7 +542,7 @@ app.post("/botyonetici/reddet/:botID", checkAuth, (req, res) => {
   
   res.redirect("/yetkili")
   
-  client.channels.get(client.ayarlar.kayıt).send(`❌ | \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
+  client.channels.get(client.ayarlar.kayıt).send(`❌ | \`${db.fetch(`botlar.${id}.sahip`)}\` USER \`${db.fetch(`botlar.${id}.isim`)}\` NAME BOT \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
   
   if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
   client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`❌ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)

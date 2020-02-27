@@ -6,7 +6,7 @@ exports.run = function(client, message, args) {
     if (type.length < 1) return message.channel.send(
 new Discord.RichEmbed()
 .setColor('BLUE')
-.setDescription('YANLIŞ ŞEKİLDE GİRDİNİZ BOTUNUZUN İSMİNİ BELİRTİNİZ')).then(msg => msg.delete(5000));
+.setDescription('WRITE IN WRONG WRITE YOUR BOT NAME')).then(msg => msg.delete(5000));
 
 const embed = new Discord.RichEmbed()
 .setColor('BLUE')
@@ -14,12 +14,12 @@ const embed = new Discord.RichEmbed()
 message.channel.send(embed)
 const embed2 = new Discord.RichEmbed()
 .setColor("BLUE")
-.setDescription(`SERTİFİKA İSTEK`)
-.addField(`\nKULLANICI BİLGİLERİ`,` \nKULLANICI ID: ${message.author.id} \nKULLANICI ADI: ${message.author.username} \nKULLANICI TAGI: #${message.author.discriminator}`)
+.setDescription(`CERTIFICATE REQUEST`)
+.addField(`\nUser Information`,` \nUSER ID: ${message.author.id} \nUSER NAME: ${message.author.username} \nUSER TAG: #${message.author.discriminator}`)
 .addField(`\nSUNUCU BİLGİLERİ`,` \nSUNUCU İSMİ: ${message.guild.name} \nSUNUCU ID: ${message.guild.id}`)
 .addField("BOT ADI", type)
 .setThumbnail(message.author.avatarURL)
-client.channels.get('624643138178383903').send(embed2); // Kanal ID 
+client.channels.get('682575198536728606').send(embed2); // Kanal ID 
 
 };
 
