@@ -20,9 +20,9 @@ client.ayarlar = {
   "renk": "#7289DA" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
-client.yetkililer = ["543858517832892442","404206792005124096","378218497571815435","615646611090964511"] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ["543858517832892442","404206792005124096","378218497571815435","615646611090964511"] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ["543858517832892442","404206792005124096","378218497571815435","615646611090964511"] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ["543858517832892442","644852897439547402","680886252517457925","615646611090964511"] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ["543858517832892442","644852897439547402","680886252517457925","615646611090964511"] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ["543858517832892442","644852897439547402","680886252517457925","615646611090964511"] //sunucu yetkililerin ıdleri gelcek array
 
 //
 
@@ -32,10 +32,10 @@ client.on("guildMemberAdd", async member => {
       let arole = otorole[member.guild.id].sayi
   let giriscikis = JSON.parse(fs.readFileSync("./jsonlar/otorol.json", "utf8"));  
   let embed = new Discord.RichEmbed()
-    .setTitle('OTOROL SİSTEMİ')
-    .setDescription(`SUNUCUYA HOŞGELDİN \`@${member.user.tag}\` OTOMATİK ROL VERİLDİ`)
+    .setTitle('SNOWLIST SYSTEM')
+    .setDescription(`WELCOME TO THE SERVER \`@${member.user.tag}\`AUTOMATIC ROLE GIVEN`)
 .setColor("ORANGE")
-    .setFooter("HBOT", client.user.avatarURL);
+    .setFooter("BOT", client.user.avatarURL);
 
   if (!giriscikis[member.guild.id].kanal) {
     return;
@@ -45,8 +45,8 @@ client.on("guildMemberAdd", async member => {
     let giriscikiskanalID = giriscikis[member.guild.id].kanal;
     let giriscikiskanali = client.guilds.get(member.guild.id).channels.get(giriscikiskanalID);
     let embed = new Discord.RichEmbed()
-   .setTitle('OTOROL SİSTEMİ')
-    giriscikiskanali.send(`》SUNUCUYA HOŞGELDİN \`@${member.user.tag}\` OTOMATİK ROL VERİLDİ《`);
+   .setTitle('SNOWLIST SYSTEM')
+    giriscikiskanali.send(`》WELCOME TO THE SERVER \`@${member.user.tag}\` AUTOMATIC ROLE GIVEN《`);
   } catch (e) { // eğer hata olursa bu hatayı öğrenmek için hatayı konsola gönderelim.
     return console.log(e)
   }
@@ -80,9 +80,9 @@ client.on('ready', async () => {
   
    require("./app.js")(client);
   
-  client.user.setActivity(`SnowBots`, { type:"WATCHING" })
+  client.user.setActivity(`SnowBot List`, { type:"WATCHING" })
   
-  console.log("Aktif!")
+  console.log("Active!")
 });
 
 setInterval(() => {
@@ -113,12 +113,12 @@ fs.readdir(`./komutlar/`, (err, files) => {
 	let jsfiles = files.filter(f => f.split(".").pop() === "js")
 
 	if(jsfiles.length <= 0) {
-		console.log("Olamazz! Hiç komut dosyası bulamadım!")
+		console.log("I couldn't find any scripts!")
 	} else {
 		if (err) {
-			console.error("Hata! Bir komutun name veya aliases kısmı yok!")
+			console.error("Error! There is no name or aliases part of a command!")
 		}
-		console.log(`${jsfiles.length} komut yüklenecek.`)
+		console.log(`${jsfiles.length} command will be loaded.`)
 
 		jsfiles.forEach(f => {
 			let props = require(`./komutlar/${f}`)
@@ -126,7 +126,7 @@ fs.readdir(`./komutlar/`, (err, files) => {
 			props.conf.aliases.forEach(alias => {
 				client.aliases.set(alias, props.help.name)
 			})
-			console.log(`Yüklenen komut: ${props.help.name}`)
+			console.log(`Loaded command: ${props.help.name}`)
 		})
 	}
 });
@@ -146,13 +146,13 @@ client.on("message", async message => {
 	}
 
 	if (cmd) {
-    if (cmd.conf.permLevel === 'ozel') { //o komutu web yetkilileri kullanabsiln sadece diye yaptıgım bişe 
+    if (cmd.conf.permLevel === 'special') { //o komutu web yetkilileri kullanabsiln sadece diye yaptıgım bişe 
       if (client.yetkililer.includes(message.author.id) === false) {
         const embed = new Discord.RichEmbed()
-					.setDescription(`Kardeşim sen WebSite yetkilisi değilsin saçma saçma işlerle uğraşma!`)
+					.setDescription(`Brother, you are not a WebSite representative. Don't deal with silly things!`)
 					.setColor(client.ayarlar.renk)
 					.setTimestamp()
-				message.channel.send("Yetersiz Yetki.")
+				message.channel.send("Insufficient Authority.")
 				return
       }
     }
@@ -160,42 +160,42 @@ client.on("message", async message => {
 		if (cmd.conf.permLevel === 1) {
 			if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 				const embed = new Discord.RichEmbed()
-					.setDescription(`Sen önce mesajları yönetmeyi öğren sonra bu komutu kullanırsın.`)
+					.setDescription(`You Need To Have manage messages Permission first then use this command.`)
 					.setColor(client.ayarlar.renk)
 					.setTimestamp()
-				message.channel.send("Yetersiz yetki.")
+				message.channel.send("Insufficient Authority.")
 				return
 			}
 		}
 		if (cmd.conf.permLevel === 2) {
 			if (!message.member.hasPermission("KICK_MEMBERS")) {
 				const embed = new Discord.RichEmbed()
-					.setDescription(`Üyeleri atma yetkin yok.`)
+					.setDescription(`You Don't Have Permission You Must Have ***KICK_MEMBERS*** Permission.`)
 					.setColor(client.ayarlar.renk)
 					.setTimestamp()
-				message.channel.send("Üyeleri atma yetkin yok.")
+				message.channel.send("You Don't Have Permission You Must Have ***KICK_MEMBERS*** Permission.")
 				return
 			}
 		}
 		if (cmd.conf.permLevel === 3) {
 			if (!message.member.hasPermission("ADMINISTRATOR")) {
 				const embed = new Discord.RichEmbed()
-					.setDescription(`Yetersiz yetki.`)
+					.setDescription(`You Need ***ADMINISTRATOR*** Permission To Use That Perm Lvl.`)
 					.setColor(client.ayarlar.renk)
 					.setTimestamp()
-				message.channel.send("Yetersiz yetki.")
+				message.channel.send("You Need ***ADMINISTRATOR*** Permission To Use That Perm Lvl.")
 				return
 			}
 		}
 		if (cmd.conf.permLevel === 4) {
 			const x = await client.fetchApplication()
-      var arr = [x.owner.id, '430011871555223553']
+      var arr = [x.owner.id, '644852897439547402', '543858517832892442', '680886252517457925']
 			if (!arr.includes(message.author.id)) {
 				const embed = new Discord.RichEmbed()
 					.setDescription(`Yetkin yetersiz.`)
 					.setColor(client.ayarlar.renk)
 					.setTimestamp()
-				message.channel.send("Yetersiz yetki.")
+				message.channel.send("You Need Lvl 4 Permission To Use That Command.")
 				return
 			}
 		}
