@@ -80,8 +80,9 @@ client.on('ready', async () => {
   
    require("./app.js")(client);
   
-  client.user.setActivity(`SnowBot List`, { type:"WATCHING" })
+  client.user.setActivity(`SnowBots Server`, { type:"WATCHING" })
   
+ 
   console.log("Active!")
 });
 
@@ -245,6 +246,7 @@ client.on('message', function(msg) {
   });    
 
 
+ const prefix = "!";
 
 client.on('message', msg => {
   if (msg.author.bot) return;
