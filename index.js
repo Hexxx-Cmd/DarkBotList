@@ -80,7 +80,7 @@ client.on('ready', async () => {
   
    require("./app.js")(client);
   
-  client.user.setActivity(`test`, { type:"WATCHING" })
+  client.user.setActivity(`SnowBots`, { type:"WATCHING" })
   
   console.log("Aktif!")
 });
