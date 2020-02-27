@@ -1,5 +1,8 @@
 body {
-    background: url('https://image.winudf.com/v2/image/Y29tLlBSSVNTSS5XYWxscGFwZXIuV2hpdGUuQmFja2dyb3VuZHdoaXRlV2FsbHBhcGVyX3NjcmVlbl8wXzE1MjMwOTM1NDdfMDQ0/screen-0.jpg?fakeurl=1&type=.jpg') !important;  
+  
+  background-image: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
+   
+  animation: bg 10s linear infinite;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
