@@ -112,10 +112,10 @@
 		<% let id = Object.keys(bot.ayar.fetch('botlar'))[i] %>
 		<% if (bot.ayar.fetch(`botlar.${id}.durum`) === 'Reddedilmiş') { %>
 		<tr>
-		<td><a class="btn btn-success" href="/botyonetici/onayla/<%=id%>">ONAYLA<i aria-hidden="true"></i></a>
-		<a class="btn btn-warning" href="/botyonetici/bekleme/<%=id%>">BEKLEMEYE AL<i aria-hidden="true"></i></a>
-		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">Davet Et (Perm: 0)</a>
-		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">Davet Et (Perm: 8)</a></td>
+		<td><a class="btn btn-success" href="/botyonetici/onayla/<%=id%>">Approve<i aria-hidden="true"></i></a>
+		<a class="btn btn-warning" href="/botyonetici/bekleme/<%=id%>">Take Wait<i aria-hidden="true"></i></a>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">Invite At (Perm: 0)</a>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">Invite At (Perm: 8)</a></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.isim`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.id`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></td>

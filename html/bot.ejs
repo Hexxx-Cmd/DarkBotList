@@ -17,15 +17,15 @@
         
           
       <%if (bot.ayar.has(`botlar.${id}.destek`)){%>
-                 <a href="<%=bot.ayar.fetch(`botlar.${id}.destek`)%>"><button class="btn btn-warning destek">DESTEK SUNUCU</button></a>
+                 <a href="<%=bot.ayar.fetch(`botlar.${id}.destek`)%>"><button class="btn btn-warning destek">Support Server</button></a>
             <%} %>
           
           <%if (bot.ayar.has(`botlar.${id}.site`)){%>
-                 <a href="<%=bot.ayar.fetch(`botlar.${id}.site`)%>"><button class="btn btn-warning website">WEB SİTESİ</button></a>
+                 <a href="<%=bot.ayar.fetch(`botlar.${id}.site`)%>"><button class="btn btn-warning website">Web Site</button></a>
             <%} %>
           
           <%if (bot.ayar.has(`botlar.${id}.github`)){%>
-                 <a href="<%=bot.ayar.fetch(`botlar.${id}.github`)%>"><button class="btn btn-warning github">GİTHUB</button></a>
+                 <a href="<%=bot.ayar.fetch(`botlar.${id}.github`)%>"><button class="btn btn-warning github">GitHub</button></a>
             <%} %>
           </div>
       <div align="center">                    
@@ -36,8 +36,8 @@
         
           <% if (user) { %>
           <% if(bot.ayar.fetch(`botlar.${id}.sahipid`) === user.id) { %>
-          <a href="/kullanici/<%=user.id%>/panel/<%=id%>/duzenle"><button class="btn btn-primary duzenle"><i aria-hiddden="true"></i>DÜZENLE</button></a>
-        <a href="/kullanici/<%=user.id%>/panel/<%=id%>/sil"><button class="sil btn btn-danger"><i aria-hidden="true"></i>SİL</button></a>
+          <a href="/kullanici/<%=user.id%>/panel/<%=id%>/duzenle"><button class="btn btn-primary duzenle"><i aria-hiddden="true"></i>Edit</button></a>
+        <a href="/kullanici/<%=user.id%>/panel/<%=id%>/sil"><button class="sil btn btn-danger"><i aria-hidden="true"></i>Delete</button></a>
           <% } %>
         <% } %>
                       

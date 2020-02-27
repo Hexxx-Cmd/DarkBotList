@@ -505,7 +505,7 @@ db.set(`botlar.${id}.durum`, 'Onaylı')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${db.fetch(`botlar.${id}.sahip`)}\` USER'S \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU ONAYLANDI`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | User \`${db.fetch(`botlar.${id}.sahip`)}\` Approved The Bot\`${db.fetch(`botlar.${req.params.botID}.isim`)}\` `)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
 client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOAT HAS BEEN APPROVED`)
