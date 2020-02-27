@@ -15,7 +15,7 @@
 <% var idd = Object.keys(bot.ayar.fetch('botlar'))[i] %>
  <%  if (bot.ayar.fetch(`botlar.${idd}.sahipid`) === user.id) { %>
   <div class="col-12 col-sm-6 col-md-4">
-        <div class="card card-lg botcard" style="background-color:#7289DA; width:16rem;">
+        <div class="card card-lg botcard" style="background-color:#4F4F50; width:16rem;">
      <div align="center" class="card-img">
          <a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar"></a>
        <% if (bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
@@ -23,30 +23,30 @@
        <% } %>
 
       <%  if(bot.ayar.fetch(`botlar.${idd}.durum`) === 'Beklemede' || !bot.ayar.has(`botlar.${idd}.durum`)) { %>
-       <div class="badge badge-warning">BEKLEMEDE</div>
+       <div class="badge badge-warning">WAITING</div>
        <% } %>
 
        <%  if(bot.ayar.fetch(`botlar.${idd}.durum`) === 'Reddedilmiş') { %>
-       <div class="badge badge-danger">REDDEDİLMİŞ</div>
+       <div class="badge badge-danger">REJECTED</div>
        <% } %>
 
        <%  if(bot.ayar.fetch(`botlar.${idd}.durum`) === 'Onaylı') { %>
-       <div class="badge badge-success">ONAYLANMIŞ</div>
+       <div class="badge badge-success">APPROVED</div>
        <% } %>
 
-       <div class="badge badge-primary"><strong style='color: white;'>OY: </strong><span style='color:whitesmoke;text-transform: none;'><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></span></div>
+       <div class="badge badge-primary"><strong style='color: white;'>VOTE: </strong><span style='color:whitesmoke;text-transform: none;'><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></span></div>
                     <div style="background-color:grey; color:#fff" class="badge badge-default"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
                             </div>
-                             <div align="center" style="background-color:#7289DA" class="card-block">
+                             <div align="center" style="background-color:#4F4F50" class="card-block">
                                 <div class="card-title">
                                   <h4><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
                                 <h6 style="font-size:17px; color:#222"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></h6></div>         
                         
                               <p class="card-text" style="color:#222"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
                                <hr>
-                               <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#7289DA">view</a> <b style="color:grey">|</b> 
-                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/duzenle" style="font-size:20px; color:#222; background-color:#7289DA">EDIT</a> <b style="color:grey">|</b> 
-                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/sil" style="font-size:20px; color:#222; background-color#7289DA"></a></h6>                          
+                               <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#4F4F50">View</a> <b style="color:grey">|</b> 
+                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/duzenle" style="font-size:20px; color:#222; background-color:#4F4F50">EDIT</a> <b style="color:grey">|</b> 
+                                <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/sil" style="font-size:20px; color:#222; background-color#4F4F50">CLEAR</a></h6>                          
                             </div>
                        </div><br>
    </div>
