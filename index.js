@@ -14,9 +14,9 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "f45yvsfPDYXp_rca1pED6B4SznUbWhcV", //bot secreti
-	"callbackURL": "https://www.discordbotlist.ga/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "626099569238736896", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "oauthSecret": "fNfWmTwu6bVfD7dHTgEYec1G5EDrhJ1d", //bot secreti
+	"callbackURL": "https://spangled-vast-spectacles.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "674389576915222536", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "#7289DA" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
@@ -80,7 +80,7 @@ client.on('ready', async () => {
   
    require("./app.js")(client);
   
-  client.user.setActivity(`BOŞ DA BOŞ`, { type:"PLAYING" })
+  client.user.setActivity(`test`, { type:"WATCHING" })
   
   console.log("Aktif!")
 });
@@ -221,7 +221,7 @@ client.on("message", async message => {
 	}
 });
 
-client.login("NjMxNTY3ODE4MTY0NDA0MjI1.XaHN_A.RS8yaLC72r66IfUocIxRFJm9DAM") //tokeni yaz işte
+client.login("Njc0Mzg5NTc2OTE1MjIyNTM2.XlcZYQ.WBugKEinErU3biKyXU8az_3j_M4") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "NjMxNTY3ODE4MTY0NDA0MjI1.XaHN_A.RS8yaLC72r66IfUocIxRFJm9DAM";
+process.env.TOKEN = "Njc0Mzg5NTc2OTE1MjIyNTM2.XlcZYQ.WBugKEinErU3biKyXU8az_3j_M4";
