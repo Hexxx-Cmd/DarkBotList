@@ -201,19 +201,19 @@ client.on("message", async message => {
 		}
 		if (cmd.conf.enabled === false) {
 			const embed = new Discord.RichEmbed()
-				.setDescription(`Bu komut devre dışı.`)
+				.setDescription(`This command is disabled.`)
 				.setColor(client.ayarlar.renk)
 				.setTimestamp()
-			message.channel.send("Bu komut devre dışı.")
+			message.channel.send("This command is disabled.")
 			return
 		}
 		if(message.channel.type === "dm") {
 			if (cmd.conf.guildOnly === true) {
 				const embed = new Discord.RichEmbed()
-					.setDescription(`Bu komutu özel mesajlarda kullanamazsın.`)
+					.setDescription(`You cannot use this command in private messages.`)
 					.setColor(client.ayarlar.renk)
 					.setTimestamp()
-				message.channel.send("[BU KOMUT ÖZEL MESAJLARDA DEVRE DIŞIDIR]")
+				message.channel.send("[You cannot use this command in private messages]")
 				return
 			}
 		}
