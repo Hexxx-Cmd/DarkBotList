@@ -1,5 +1,5 @@
 body {
-    background: url('https://cdn.discordapp.com/attachments/627097197389021192/629647372083003412/backgrounder_28.jpg') !important;  
+    background: url('https://image.winudf.com/v2/image/Y29tLlBSSVNTSS5XYWxscGFwZXIuV2hpdGUuQmFja2dyb3VuZHdoaXRlV2FsbHBhcGVyX3NjcmVlbl8wXzE1MjMwOTM1NDdfMDQ0/screen-0.jpg?fakeurl=1&type=.jpg') !important;  
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
@@ -16,7 +16,7 @@ h6:link, h6:visited {
 
 .topnav {
 	overflow: hidden;	
-	background-color: #fff1;
+	background-color: #4F4F50;
 }
 
 .topnav a {
@@ -30,7 +30,7 @@ h6:link, h6:visited {
 }
 
 .topnav a:hover {
-	background-color: #222;
+	background-color: #410404;
 	color: white;
 }
 
@@ -76,7 +76,7 @@ h6:link, h6:visited {
 	width: 100%;
 	height: 269px;
 	float: up;
-	color: white;
+	color: black;
 	font-family: arial;
 }
 
