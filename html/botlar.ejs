@@ -1,16 +1,20 @@
 <%- include('ek/header', {bot, user, path}) %>
 
+
 <div class="container">
 <br>
-<h3 align="center" style="color:#fff">
+<h3 align="center" style="color:#ffff"> 
     <strong>All Bots
     </strong></h3>
   <div align="center"><p> <br></p></div>
   <br>
-    
+  
+  
   <div align="center">
     <input type="search" placeholder="Find Bot...." id="ara" name="ara">
     <br>
+    
+  
      
     
     <p style="color:#4F4F50">
@@ -31,10 +35,10 @@
    <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
 		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
     <div class="col-12 col-sm-6 col-md-4">
-        <div class="card card-lg botcard" style="background-color:#7289DA; width:16rem;">
+        <div class="card card-lg botcard" style="background-color:#4F4F50; width:16rem;"> 
     <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
   
-          <a name="aramaResim" id="aramaResim" href="/bot/<%=idd%>" style="color:#7289DA"><img value="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>" src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" style="width:100%" alt="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a>
+          <a name="aramaResim" id="aramaResim" href="/bot/<%=idd%>" style="color:# 7289DA"><img value="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>" src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" style="width:100%" alt="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a>
         
           <% if(bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
        
@@ -43,7 +47,7 @@
        
                      
           </div>
-      <div align="center" style="background-color:#4F4F50" class="card-body">
+      <div align="center" style="background-color:#4F4F50" class="card-body"> 
                                <div align="center" class="card-title">
                                   <h4><a style="color:white"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
                                 <h6 style="font-size:17px; color:white"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></h6></div>         
