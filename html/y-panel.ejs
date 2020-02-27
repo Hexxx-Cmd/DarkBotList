@@ -41,7 +41,7 @@
 <div style="overflow-x:auto;">
 <table class="table" style="background-color:#fff">
 <tr>
-<th>İŞLEM</th>
+<th>OPERATION</th>
 <th>BOT ADI</th>
 <th>BOT ID</th>
 <th style="width:10%;">BOT PREFİX</th>
@@ -51,10 +51,10 @@
 <% let id = Object.keys(bot.ayar.fetch('botlar'))[i] %>
 <% if (bot.ayar.fetch(`botlar.${id}.durum`) === 'BEKLEMEDE' || bot.ayar.has(`botlar.${id}.durum`) === false) { %>
 <tr>
-<td><a class="btn btn-success" href="/botyonetici/onayla/<%=id%>">ONAYLA<i aria-hidden="true"></i></a>
-<a class="btn btn-danger" href="/botyonetici/reddet/<%=id%>">REDDET<i aria-hidden="true"></i></a>
-<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">DAVET ET (PERM 0)</a>
-<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">DAVET ET (PERM 8)</a></td>
+<td><a class="btn btn-success" href="/botyonetici/onayla/<%=id%>">APPROVE<i aria-hidden="true"></i></a>
+<a class="btn btn-danger" href="/botyonetici/reddet/<%=id%>">SAVED<i aria-hidden="true"></i></a>
+<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">INVITE (PERM 0)</a>
+<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">INVITE (PERM 8)</a></td>
 <td><%=bot.ayar.fetch(`botlar.${id}.isim`)%></td>
 <td><%=bot.ayar.fetch(`botlar.${id}.id`)%></td>
 <td><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></td>
@@ -82,10 +82,10 @@
 		<% let id = Object.keys(bot.ayar.fetch('botlar'))[i] %>
 		<% if (bot.ayar.fetch(`botlar.${id}.durum`) === 'Onaylı') { %>
 	  <tr>
-		<td><a class="btn btn-warning" href="/botyonetici/bekleme/<%=id%>">BEKLEMEYE AL<i aria-hidden="true"></i></a>
-		<a class="btn btn-danger" href="/botyonetici/reddet/<%=id%>">REDDET<i aria-hidden="true"></i></a>
-		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">Davet Et (Perm: 0)</a>
-		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">Davet Et (Perm: 8)</a></td>
+		<td><a class="btn btn-warning" href="/botyonetici/bekleme/<%=id%>">TAKE WAIT<i aria-hidden="true"></i></a>
+		<a class="btn btn-danger" href="/botyonetici/reddet/<%=id%>">SAVED<i aria-hidden="true"></i></a>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">INVITE (Perm: 0)</a>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">INVITE Et (Perm: 8)</a></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.isim`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.id`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></td>
@@ -98,7 +98,7 @@
   <br><br>
 
 <!-- Reddedilmiş Botlar -->
-<a class="btn btn-default" data-toggle="collapse" style="background-color:#7289DA; color:#222; width:100%;" data-target="#onaysız">REDDEDİLMİŞ BOTLAR</a>
+<a class="btn btn-default" data-toggle="collapse" style="background-color:#7289DA; color:#222; width:100%;" data-target="#onaysız">REJECTED BOTS</a>
 <div id="onaysız" class="collapse in">
 	<div style="overflow-x:auto;">
 		<table class="table" style="background-color:#fff">
