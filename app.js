@@ -524,7 +524,7 @@ res.redirect("/yetkili")
 client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.sahip`)}\` USER'S  \`${db.fetch(`botlar.${id}.isim`)}\` THE BOARD OF FORENSE HAS BEEN INVESTIGATED`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\` YOUR NAMED BOAT WAS CERTIFIED`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\` Your NAMED BOAT WAS CERTIFIED`)
 }
 
 });
