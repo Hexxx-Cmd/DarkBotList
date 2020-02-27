@@ -20,9 +20,9 @@ client.ayarlar = {
   "renk": "#7289DA" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
-client.yetkililer = ["621749124890361866","404206792005124096","378218497571815435","615646611090964511"] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ["621749124890361866","404206792005124096","378218497571815435","615646611090964511"] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ["621749124890361866","404206792005124096","378218497571815435","615646611090964511"] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ["543858517832892442","404206792005124096","378218497571815435","615646611090964511"] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ["543858517832892442","404206792005124096","378218497571815435","615646611090964511"] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ["543858517832892442","404206792005124096","378218497571815435","615646611090964511"] //sunucu yetkililerin ıdleri gelcek array
 
 //
 
