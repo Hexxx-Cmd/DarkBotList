@@ -6,18 +6,18 @@ exports.run = function(client, message, args) {
     if (type.length < 1) return message.channel.send(
 new Discord.RichEmbed()
 .setColor('BLUE')
-.setDescription('YANLIŞ ŞEKİLDE GİRDİNİZ HATALI KODU BELİRTİNİZ')).then(msg => msg.delete(5000));
+.setDescription('WRITE IN WRONG WRITTEN REQUEST CODE NAME ')).then(msg => msg.delete(5000));
 
 const embed = new Discord.RichEmbed()
 .setColor('BLUE')
-.setDescription(`BİLDİRİNİZİ ALDIK`)
+.setDescription(`WE RECEIVED YOUR REQUEST`)
 message.channel.send(embed)
 const embed2 = new Discord.RichEmbed()
 .setColor("BLUE")
-.setDescription(`KOD HATA`)
-.addField(`\nKULLANICI BİLGİLERİ`,` \nKULLANICI ID: ${message.author.id} \nKULLANICI ADI: ${message.author.username} \nKULLANICI TAGI: #${message.author.discriminator}`)
+.setDescription(`REQUEST STATEMENT`)
+.addField(`\nUSER INFORMATION`,` \nUSER ID: ${message.author.id} \nUSERNAME: ${message.author.username} \nUser Tag: #${message.author.discriminator}`)
 .addField(`\nSUNUCU BİLGİLERİ`,` \nSUNUCU İSMİ: ${message.guild.name} \nSUNUCU ID: ${message.guild.id}`)
-.addField("HATALI KOD", type)
+.addField("İSTENEN KOD", type)
 .setThumbnail(message.author.avatarURL)
 client.channels.get('682575198536728606').send(embed2); // Kanal ID 
 

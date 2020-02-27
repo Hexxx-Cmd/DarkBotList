@@ -34,7 +34,7 @@ if (!mentionedChannel && args[0] !== "sıfırla") return message.channel.sendEmb
 	})
 
 	
-		message.channel.sendEmbed(new Discord.RichEmbed().setColor('#7289DA').setAuthor("》OTOROL SİSTEMİ《").setDescription(`》OTOROL AYARLANDI《`)).then(m => m.delete(5000))
+		message.channel.sendEmbed(new Discord.RichEmbed().setColor('#7289DA').setAuthor("》SNOW BOT LIST SYSTEM《").setDescription(`》SNOW BOT LIST SYSTEM《`)).then(m => m.delete(5000))
 		
 }
 

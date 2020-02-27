@@ -217,10 +217,10 @@ db.set(`kbotlar.${req.user.id}.${ID}`, db.fetch(`botlar.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` USER \`${sistem.username}#${sistem.discriminator}\` Adding New Bot :new:`)
+client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | \`${req.user.username}#${req.user.discriminator}\` USER \`${sistem.username}#${sistem.discriminator}\` Adding New Bot :new:`)
 
 if (client.users.has(req.user.id) === true) {
-  client.users.get(req.user.id).send(`✔️ | \`${sistem.username}#${sistem.discriminator}\` YOUR BOAT HAS APPLIED THE SYSTEM ONLY WHAT YOU SHOULD DO`)
+  client.users.get(req.user.id).send(`:white_check_mark: | \`${sistem.username}#${sistem.discriminator}\` YOUR BOT HAS APPLIED TO THE SYSTEM YOU JUST NEED TO WAIT NOW`)
 }
 
 }})
@@ -508,7 +508,7 @@ res.redirect("/yetkili")
 client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | User \`${db.fetch(`botlar.${id}.sahip`)}\` Approved The Bot\`${db.fetch(`botlar.${req.params.botID}.isim`)}\` `)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOAT HAS BEEN APPROVED`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOT HAS BEEN APPROVED`)
 }
 
 });
