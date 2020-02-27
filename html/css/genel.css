@@ -1,8 +1,17 @@
-body {
-  
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
+
+#animate-back { 
+
   background-image: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
-   
+  animation: animatedBackground 40s linear infinite;
   animation: bg 10s linear infinite;
+}
+body {
+    background-image: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
@@ -19,7 +28,7 @@ h6:link, h6:visited {
 
 .topnav {
 	overflow: hidden;	
-	background-color: #4F4F50;
+	background-color: #050505;
 }
 
 .topnav a {

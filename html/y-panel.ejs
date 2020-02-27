@@ -11,12 +11,12 @@
 <div style="overflow-x:auto;">
 <table class="table" style="background-color:#fff">
 <tr>
-<th>BOT ADI</th>
+<th>BOT USERNAME</th>
 <th>BOT ID</th>
-<th>BOT PREFİX</th>
-<th>SAHİP</th>
-<th>SAHİP ID</th>
-<th>DURUM</th>
+<th>BOT PREFIX</th>
+<th>OWNER</th>
+<th>OWNER ID</th>
+<th>STATUS</th>
 </tr>
 
 <%for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) {%>
@@ -44,7 +44,7 @@
 <th>OPERATION</th>
 <th>BOT ADI</th>
 <th>BOT ID</th>
-<th style="width:10%;">BOT PREFİX</th>
+<th style="width:10%;">BOT PREFIX</th>
 </tr>
 
 <%for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) {%>
@@ -75,7 +75,7 @@
 		<th>İŞLEM</th>
 		<th>BOT ADI</th>
 		<th>BOT ID</th>
-		<th style="width:10%;">BOT PREFİX</th>
+		<th style="width:10%;">BOT PREFIX</th>
 		</tr>	
       
 		<%for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) {%>
@@ -85,7 +85,7 @@
 		<td><a class="btn btn-warning" href="/botyonetici/bekleme/<%=id%>">TAKE WAIT<i aria-hidden="true"></i></a>
 		<a class="btn btn-danger" href="/botyonetici/reddet/<%=id%>">SAVED<i aria-hidden="true"></i></a>
 		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">INVITE (Perm: 0)</a>
-		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">INVITE Et (Perm: 8)</a></td>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">INVITE (Perm: 8)</a></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.isim`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.id`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></td>
@@ -114,8 +114,8 @@
 		<tr>
 		<td><a class="btn btn-success" href="/botyonetici/onayla/<%=id%>">Approve<i aria-hidden="true"></i></a>
 		<a class="btn btn-warning" href="/botyonetici/bekleme/<%=id%>">Take Wait<i aria-hidden="true"></i></a>
-		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">Invite At (Perm: 0)</a>
-		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">Invite At (Perm: 8)</a></td>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">Invite (Perm: 0)</a>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">Invite (Perm: 8)</a></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.isim`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.id`)%></td>
 		<td><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></td>
@@ -130,7 +130,7 @@
     
 <% } else {%>
 <h5 style="color:#fff">
-Sistemde hiç bot bulunmuyor.
+There are no bots in the system.
 </h5>
 <% } %>
 
