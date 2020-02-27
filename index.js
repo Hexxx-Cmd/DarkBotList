@@ -229,20 +229,119 @@ client.on('message', function(msg) {
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
       .setTitle(`__**ServerInfo**__`)
-      .addField('**اسم السيرفر**',`[** __${msg.guild.name}__ **]`,true)
-      .addField('**نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
-      .addField('**عدد الاعضاء**',`[** __${msg.guild.memberCount}__ **]`,true)
-      .addField('**عدد البشريين**',`[** __${msg.guild.memberCount - msg.guild.members.filter(m => m.user.bot).size}__ **]`,true)
-      .addField('**عدد البوتات**',`[** __${msg.guild.members.filter(m => m.user.bot).size}__ **]`,true)
-      .addField('**عدد الاعضاء الاونلاين**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
-      .addField('**الرومات**',`[**${msg.guild.channels.filter(m => m.type === 'text').size}** **text | Voice** **${msg.guild.channels.filter(m => m.type === 'voice').size}**]`,true)
-      .addField('**الأونـر**',`**${msg.guild.owner}**`,true)
-      .addField('**ايدي السيرفر**',`[** __${msg.guild.id}__ **]`,true)
-      .addField('**الرتب**',`[** __${msg.guild.roles.size}__ **]`,true)
-      .addField('**تاريخ انشاء السيرفر**',`[** __${msg.guild.createdAt.toLocaleString()}__ **]`, true)
+      .addField('**Server Name**',`[** __${msg.guild.name}__ **]`,true)
+      .addField('**Server Region**',`[** __${msg.guild.region}__ **]`,true)
+      .addField('**All Members**',`[** __${msg.guild.memberCount}__ **]`,true)
+      .addField('**All Human**',`[** __${msg.guild.memberCount - msg.guild.members.filter(m => m.user.bot).size}__ **]`,true)
+      .addField('**All Bots**',`[** __${msg.guild.members.filter(m => m.user.bot).size}__ **]`,true)
+      .addField('**Members Online**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
+      .addField('**All Rooms **',`[**${msg.guild.channels.filter(m => m.type === 'text').size}** **text | Voice** **${msg.guild.channels.filter(m => m.type === 'voice').size}**]`,true)
+      .addField('**Server Owner**',`**${msg.guild.owner}**`,true)
+      .addField('**Server ID**',`[** __${msg.guild.id}__ **]`,true)
+      .addField('**All Roles**',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField('**Date Of Server Maked**',`[** __${msg.guild.createdAt.toLocaleString()}__ **]`, true)
       msg.channel.send({embed:embed});
     }
   });    
+
+
+
+client.on('message', msg => {
+  if (msg.author.bot) return;
+  if (!msg.content.startsWith(prefix)) return;
+  let command = msg.content.split(" ")[0];
+  command = command.slice(prefix.length);
+  let args = msg.content.split(" ").slice(1);
+
+    if(command === "clear") {
+        const emoji = client.emojis.find("name", "wastebasket")
+    let textxt = args.slice(0).join("");
+    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
+    if (textxt == "") {
+        msg.delete().then
+    msg.channel.send("***```اكتب عدد الرسائل التي تريد مسحها```***").then(m => m.delete(3000));
+} else {
+    msg.delete().then
+    msg.delete().then
+    msg.channel.bulkDelete(textxt);
+        msg.channel.send("```php\nتم لقد مسحت : " + textxt + "\n```").then(m => m.delete(3000));
+        }    
+    }
+}
+});
+
+
+
+
+
+
+client.on('message', message => {
+  var prefix = '!';
+ 
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+  if (command == "ban") {
+      if(!message.channel.guild) return message.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
+  if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**انت لا تملك صلاحية الباند**");
+  if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("البوت لايملك صلاحيات الباند");
+  let user = message.mentions.users.first();
+  let reason = message.content.split(" ").slice(2).join(" ");
+if (message.mentions.users.size < 1) return message.reply("**منشن الشخص اللي تريد تبنيده**");
+  if (!message.guild.member(user)
+.kickable) return message.reply("**لايمكنني تبنيد هذا الشخص**");
+
+  message.guild.member(user).ban();
+
+  const banembed = new Discord.RichEmbed()
+  .setAuthor(`تم تبنيد العضو`, user.displayAvatarURL)
+  .setColor("#502faf")
+  .setTimestamp()
+  .addField("**العضو الي تبند:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**العضو اللي قام بتبنيده:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**السبب**", '**[ ' + `${reason}` + ' ]**')
+  message.channel.send({
+    embed : banembed
+  })
+}
+});
+
+
+
+client.on('message', message => {
+var prefix = "!";
+       if(message.content === prefix + "close") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: false
+
+              }).then(() => {
+                  message.reply("**The Chat Is Closed :white_check_mark: **")
+              });
+                }
+//FIRE BOT
+    if(message.content === prefix + "open") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: true
+
+              }).then(() => {
+                  message.reply("** The Chat Is Opened :white_check_mark:**")
+              });
+    }
+       
+});
+
+
 
 
 client.login("Njc0Mzg5NTc2OTE1MjIyNTM2.XlcZYQ.WBugKEinErU3biKyXU8az_3j_M4") //tokeni yaz işte
