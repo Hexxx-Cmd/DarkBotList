@@ -221,6 +221,30 @@ client.on("message", async message => {
 	}
 });
 
+
+
+client.on('message', function(msg) {
+    if(msg.content.startsWith ('!server')) {
+      let embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setThumbnail(msg.guild.iconURL)
+      .setTitle(`__**ServerInfo**__`)
+      .addField('**اسم السيرفر**',`[** __${msg.guild.name}__ **]`,true)
+      .addField('**نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
+      .addField('**عدد الاعضاء**',`[** __${msg.guild.memberCount}__ **]`,true)
+      .addField('**عدد البشريين**',`[** __${msg.guild.memberCount - msg.guild.members.filter(m => m.user.bot).size}__ **]`,true)
+      .addField('**عدد البوتات**',`[** __${msg.guild.members.filter(m => m.user.bot).size}__ **]`,true)
+      .addField('**عدد الاعضاء الاونلاين**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
+      .addField('**الرومات**',`[**${msg.guild.channels.filter(m => m.type === 'text').size}** **text | Voice** **${msg.guild.channels.filter(m => m.type === 'voice').size}**]`,true)
+      .addField('**الأونـر**',`**${msg.guild.owner}**`,true)
+      .addField('**ايدي السيرفر**',`[** __${msg.guild.id}__ **]`,true)
+      .addField('**الرتب**',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField('**تاريخ انشاء السيرفر**',`[** __${msg.guild.createdAt.toLocaleString()}__ **]`, true)
+      msg.channel.send({embed:embed});
+    }
+  });    
+
+
 client.login("Njc0Mzg5NTc2OTE1MjIyNTM2.XlcZYQ.WBugKEinErU3biKyXU8az_3j_M4") //tokeni yaz işte
 
 process.env = {}
