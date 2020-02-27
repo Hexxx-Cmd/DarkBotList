@@ -220,7 +220,7 @@ res.redirect("/kullanici/"+req.params.userID+"/panel");
 client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${sistem.username}#${sistem.discriminator}\` ADLI BOTU İLE BAŞVURU YAPTI`)
 
 if (client.users.has(req.user.id) === true) {
-  client.users.get(req.user.id).send(`✔️ | \`${sistem.username}#${sistem.discriminator}\` ADLI BOTUNUZ SİSTEME BAŞVURDU TEK YAPMANIZ GEREKEN BEKLEMEK`)
+  client.users.get(req.user.id).send(`✔️ | \`${sistem.username}#${sistem.discriminator}\` YOUR BOAT HAS APPLIED THE SYSTEM ONLY WHAT YOU SHOULD DO`)
 }
 
 }})
@@ -508,7 +508,7 @@ res.redirect("/yetkili")
 client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU ONAYLANDI`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ ONAYLANDI`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOAT HAS BEEN APPROVED`)
 }
 
 });
@@ -521,10 +521,10 @@ db.set(`botlar.${id}.durum`, 'Beklemede')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ  \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTU İNCELENMEYE ALINDI`)
+client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${db.fetch(`botlar.${id}.sahip`)}\` ADLI KULLANICININ  \`${db.fetch(`botlar.${id}.isim`)}\` THE BOARD OF FORENSE HAS BEEN INVESTIGATED`)
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ SERTİFİKA İNCELENMESİNE ALINDI`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`✔️ | \`${db.fetch(`botlar.${id}.isim`)}\` YOUR NAMED BOAT WAS CERTIFIED`)
 }
 
 });
