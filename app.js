@@ -542,10 +542,10 @@ app.post("/botyonetici/reddet/:botID", checkAuth, (req, res) => {
   
   res.redirect("/yetkili")
   
-  client.channels.get(client.ayarlar.kayıt).send(`❌ | \`${db.fetch(`botlar.${id}.sahip`)}\` USER \`${db.fetch(`botlar.${id}.isim`)}\` NAME BOT \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
+  client.channels.get(client.ayarlar.kayıt).send(`❌ | \`${db.fetch(`botlar.${id}.sahip`)}\` USER \`${db.fetch(`botlar.${id}.isim`)}\` NAME BOT \`${req.body['red-sebep']}\`REASONED WITH REASON`)
   
   if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-  client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`❌ | \`${db.fetch(`botlar.${id}.isim`)}\` ADLI BOTUNUZ \`${req.body['red-sebep']}\` SEBEBİ İLE RED EDİLDİ`)
+  client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`❌ | \`${db.fetch(`botlar.${id}.isim`)}\` YOUR BOT \`${req.body['red-sebep']}\` REASONED WITH REASON`)
   }
 
   });
