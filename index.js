@@ -32,10 +32,10 @@ client.on("guildMemberAdd", async member => {
       let arole = otorole[member.guild.id].sayi
   let giriscikis = JSON.parse(fs.readFileSync("./jsonlar/otorol.json", "utf8"));  
   let embed = new Discord.RichEmbed()
-    .setTitle('SNOWLIST SYSTEM')
-    .setDescription(`WELCOME TO THE SERVER \`@${member.user.tag}\`AUTOMATIC ROLE GIVEN`)
-.setColor("ORANGE")
-    .setFooter("BOT", client.user.avatarURL);
+    .setTitle('SnowList System')
+    .setDescription(`Welcome to our server \`@${member.user.tag}\` role has been given automatically`)
+    .setColor("ORANGE")
+    .setFooter("Bot", client.user.avatarURL);
 
   if (!giriscikis[member.guild.id].kanal) {
     return;
@@ -45,8 +45,8 @@ client.on("guildMemberAdd", async member => {
     let giriscikiskanalID = giriscikis[member.guild.id].kanal;
     let giriscikiskanali = client.guilds.get(member.guild.id).channels.get(giriscikiskanalID);
     let embed = new Discord.RichEmbed()
-   .setTitle('SNOWLIST SYSTEM')
-    giriscikiskanali.send(`》WELCOME TO THE SERVER \`@${member.user.tag}\` AUTOMATIC ROLE GIVEN《`);
+   .setTitle('SnowList System')
+    giriscikiskanali.send(`Welcome to our server \`@${member.user.tag}\` role has been given automatically`);
   } catch (e) { // eğer hata olursa bu hatayı öğrenmek için hatayı konsola gönderelim.
     return console.log(e)
   }
