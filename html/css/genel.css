@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
 
 body {
-    background: url('https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png') !important;  
+background-image: url('https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png') !important;  
+animation: bg 10s linear infinite;
+}
+
+@keyframes animatedBackground {
+
+
+@keyframes bg {
+    0% {
+        background-position: 0px 0px;
+  }
+    100% {
+        background-position: 120px 80px;
+  }
 }
 
 
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
 
 .jumbotron {
   background-color:transparent; 
