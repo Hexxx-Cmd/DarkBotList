@@ -4,14 +4,14 @@
 }
 
 
-#animate-back { 
+body #animate-back { 
 
-  background-image: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
+  background: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
   animation: animatedBackground 40s linear infinite;
   animation: bg 10s linear infinite;
 }
-body {
-    background-image: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
+ {
+    background: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
