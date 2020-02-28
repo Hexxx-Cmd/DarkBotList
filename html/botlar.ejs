@@ -32,10 +32,15 @@
   <% const map = top.map(x=>x) %>
 	<% for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) { %>
   <% let idd = map[i] %>
+    
    <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
+    
 		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
+    
     <div class="col-12 col-sm-6 col-md-4">
+      
         <div class="card card-lg botcard" style="background-color:#4F4F50; width:16rem;"> 
+          
     <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
   
           <a name="aramaResim" id="aramaResim" href="/bot/<%=idd%>" style="color:# 7289DA"><img value="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>" src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" style="width:100%" alt="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a>
@@ -48,8 +53,11 @@
                      
           </div>
       <div align="center" style="background-color:#4F4F50" class="card-body"> 
+        
                                <div align="center" class="card-title">
+                                 
                                   <h4><a style="color:white"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
+                                 
                                 <h6 style="font-size:17px; color:white"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></h6></div>         
                         
                               <p class="card-text" style="color:white"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
