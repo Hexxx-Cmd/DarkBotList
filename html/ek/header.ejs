@@ -140,15 +140,15 @@
      <a id="top" name="top"></a>
  
 <div class="topnav" id="myTopnav">
-			<a href="/">HOME PAGE</a>
-      <a href="/botlar">BOTS</a>
+			<a href="/">Home Page</a>
+      <a href="/botlar">Bots</a>
 			<% if (!user) { %>
-      <a href="/giris">LOGIN</a>
+      <a href="/giris">Login</a>
       <% } else { %>
-      <a href="/botekle">ADD YOUR BOT</a>
-			<a href="/yetkili">PANEL</a>
-      <a href="/hakkimizda">ABOUT US</a>
-      <a href="/sertifika">CERTIFICATE</a>
+      <a href="/botekle">Add Your Bot</a>
+			<a href="/yetkili">Panel</a>
+      <a href="/hakkimizda">About Us</a>
+      <a href="/sertifika">Certificate</a>
 			<a href="/kullanici/<%=user.id%>">
 
       <%=user.username%>
@@ -156,7 +156,7 @@
 
       </a>
       <% if (bot.yetkililer.includes(user.id) === true) { %>
-      <a href="/cikis">LOG OUT</a>
+      <a href="/cikis">Log Out</a>
       <% } %>
       <% } %>	
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
