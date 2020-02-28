@@ -413,11 +413,11 @@ let ayar = req.body
 
 if(ayar['mesaj-1']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-1']}" }`))
-client.channels.get('624643138178383903').send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-1']}\``)
+client.channels.get('682661562678247584').send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-1']}\``)
 }
 if(ayar['mesaj-2']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-2']}" }`))
-client.channels.get('624643138178383903').send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-2']}\``)
+client.channels.get('682661562678247584').send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICI \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ADLI BOTU REPORTLADI \n**SEBEP:** \`${ayar['mesaj-2']}\``)
 }
 
 res.redirect('/bot/'+req.params.botID);
