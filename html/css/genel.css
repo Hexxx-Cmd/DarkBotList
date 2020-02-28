@@ -1,14 +1,8 @@
-@keyframes animatedBackground {
-	from { background-position: 0 0; }
-  to { background-position: 100% 0; }
+
+body {
+    background: url('https://support.discordapp.com/hc/en-us/article_attachments/206303208/eJwVyksOwiAQANC7sJfp8Ke7Lt15A0MoUpJWGmZcGe-ubl_eW7zGLmaxMZ80A6yNch-rJO4j1SJr73Uv6Wwkcz8gMae8HeXJBOjC5NEap42dokUX_4SotI8GVfBaYYDldr3n3y_jomRtD_H5ArCeI9g.zGz1JSL-9DXgpkX_SkmMDM8NWGg.gif') !important;  
 }
 
-
-#animate-back { 
-
-  background: url("https://cdn.discordapp.com/attachments/533569070423867412/575339494191005696/eS4IxK3.png");
-  animation: animatedBackground 40s linear infinite;
-}
 
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
