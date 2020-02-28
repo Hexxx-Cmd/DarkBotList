@@ -417,7 +417,7 @@ client.channels.get('682661562678247584').send(`:no_entry:  | User  \`${req.user
 }
 if(ayar['mesaj-2']) {
 db.push(`botlar.${req.params.botID}.raporlar`, JSON.parse(`{ "rapor":"${ayar['mesaj-2']}" }`))
-client.channels.get('682661562678247584').send(`:no_entry:  | User  \`${req.user.username}#${req.user.discriminator}\` Report The Bot \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` Reason >>>\n**REASON:** \`${ayar['mesaj-2']}\``)
+client.channels.get('682661562678247584').send(`:no_entry:  | ** User ** \`${req.user.username}#${req.user.discriminator}\` ** Reported The Bot ** \`${db.fetch(`botlar.${req.params.botID}.isim`)}\` ** Reason ** \n**REASON:** \`${ayar['mesaj-2']}\``)
 }
 
 res.redirect('/bot/'+req.params.botID);
