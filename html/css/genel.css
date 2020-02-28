@@ -7,6 +7,13 @@ animation: bg 10s linear infinite;
 }
 
 @keyframes animatedBackground {
+	from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 
 @keyframes bg {
