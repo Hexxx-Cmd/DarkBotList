@@ -217,10 +217,11 @@ db.set(`kbotlar.${req.user.id}.${ID}`, db.fetch(`botlar.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | \`${req.user.username}#${req.user.discriminator}\` USER \`${sistem.username}#${sistem.discriminator}\` Adding New Bot :new: https://snowbotlist.ml/bot/  `)
+client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | \`${req.user.username}#${req.user.discriminator}\` USER \`${sistem.username}#${sistem.discriminator}\` Adding New Bot :new: 
+https://snowbotlist.tk/bot/${sistem.id}  `)
 
 if (client.users.has(req.user.id) === true) {
-  client.users.get(req.user.id).send(`:white_check_mark: | \`${sistem.username}#${sistem.discriminator}\` YOUR BOT HAS APPLIED TO THE SYSTEM YOU JUST NEED TO WAIT NOW`)
+  client.users.get(req.user.id).send(`:white_check_mark: | \`${sistem.username}#${sistem.discriminator}\` YOUR BOT HAS APPLIED TO THE SYSTEM YOU JUST NEED TO WAIT NOW :tada:`)
 }
 
 }})
@@ -505,7 +506,9 @@ db.set(`botlar.${id}.durum`, 'Onaylı')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | User \`${db.fetch(`botlar.${id}.sahip`)}\` Approved The Bot\`${db.fetch(`botlar.${req.params.botID}.isim`)}\` `)
+client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | User \`${db.fetch(`botlar.${id}.sahip`)}\` Approved The Bot\`${db.fetch(`botlar.${req.params.botID}.isim`)}\` 
+https://snowbotlist.tk/bot/${sistem.id}  `)
+
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
 client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOT HAS BEEN APPROVED`)
