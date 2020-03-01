@@ -16,7 +16,7 @@ client.ayarlar = {
   "prefix": "!", //prefix
   "oauthSecret": "fNfWmTwu6bVfD7dHTgEYec1G5EDrhJ1d", //bot secreti
 	"callbackURL": "https://snowbotlist.tk/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "682575198536728606", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+	"kayıt": "683457272071979237", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "#7289DA" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
