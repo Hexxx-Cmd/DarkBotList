@@ -221,7 +221,7 @@ client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | \`${req.u
 https://snowbotlist.tk/bot/${sistem.id}  `)
 
 if (client.users.has(req.user.id) === true) {
-  client.users.get(req.user.id).send(`:white_check_mark: | \`${sistem.username}#${sistem.discriminator}\` YOUR BOT HAS APPLIED TO THE SYSTEM YOU JUST NEED TO WAIT NOW :tada:`)
+  client.users.get(req.user.id).send(`**:white_check_mark: | \`${sistem.username}#${sistem.discriminator}\` Your Bot Has Applied To The Ststem You Just Need To Wait Now...**`)
 }
 
 }})
@@ -511,7 +511,7 @@ https://snowbotlist.tk/bot/${db.fetch(`botlar.${req.params.ID}.isim`)}`)
 
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOT HAS BEEN APPROVED`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOT HAS BEEN APPROVED :tada:`)
 }
 
 });
