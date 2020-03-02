@@ -141,7 +141,7 @@
  
 <div class="topnav" id="myTopnav">
 			<a href="/">Home Page</a>
-      <a href="/botlar">Bots</a>
+     <!--- <a href="/botlar">Bots</a> --->
 			<% if (!user) { %>
       <a href="/giris">Login</a>
       <% } else { %>
@@ -151,7 +151,7 @@
       <a href="/sertifika">Certificate</a>
       <a href="#">Soon</a>
 			<a href="/kullanici/<%=user.id%>">
-
+      <%=user.avatarURL%>
       <%=user.username%>
       
 
