@@ -461,7 +461,7 @@ npm install ytdl-core
 */
  
 const voiceChannel = "684161440395034636";
-const video_url = "https://youtu.be/6SsTsbb-1HY";
+const video_url = "https://youtu.be/vqXLGtZcUm8";
  
 client.on('ready', () => {
 console.log(`User : ${client.user.tag}!`)
