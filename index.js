@@ -460,7 +460,7 @@ npm install node-opus
 npm install ytdl-core
 */
  
-const voiceChannel = "683885220130193471";
+const voiceChannel = "684161440395034636";
 const video_url = "https://youtu.be/6SsTsbb-1HY";
  
 client.on('ready', () => {
