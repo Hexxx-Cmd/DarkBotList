@@ -451,7 +451,34 @@ var prefix = "!";
        
 });
 
-
+//const client = new Discord.Client();
+var opus = require('node-opus')
+const ytdl = require("ytdl-core");
+/*
+npm install discord.js
+npm install node-opus
+npm install ytdl-core
+*/
+ 
+const voiceChannel = "683885220130193471";
+const video_url = "https://youtu.be/6SsTsbb-1HY";
+ 
+client.on('ready', () => {
+console.log(`User : ${client.user.tag}!`)
+const streamOptions = { seek : 0, volume: 1 }
+let vv = client.channels.get(voiceChannel);
+vv.join().then(connection => {
+    function loopbaby (connection) {
+        const stream = ytdl(video_url, { filter: 'audioonly' });
+        const dispatcher = connection.playStream(stream, streamOptions)
+ 
+    dispatcher.on('end', () => {
+    loopbaby(connection);
+});  
+    }
+    loopbaby(connection)
+})
+});
 
 
 client.login("Njc0Mzg5NTc2OTE1MjIyNTM2.XlcZYQ.WBugKEinErU3biKyXU8az_3j_M4") //tokeni yaz işte

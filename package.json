@@ -39,7 +39,9 @@
     "request": "^2.88.0",
     "url": "^0.11.0",
     "useful-tools": "^0.0.33",
-    "window": "^4.2.5"
+    "window": "^4.2.5",
+    "node-opus": "^0.3.2",
+    "ytdl-core": "^2.0.0"
   },
   "engines": {
     "node": "8.x"
