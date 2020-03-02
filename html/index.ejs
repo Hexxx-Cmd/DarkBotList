@@ -1,46 +1,103 @@
 <%- include('ek/header', {bot, user, path}) %>
-<div class="container">
-  
-	 <div class="jumbotron">
-		<div align="center">
-			<img src="https://cdn.discordapp.com/attachments/680892879249604665/683026540560384109/Avatar_Link-5.png" width="250px" height="250px" class="d-inline-block align-top rounded-circle" alt=""><br><br>
-      <h3><b>SnowBot List</b></h3>
-      <br>
-    <br> <a href="https://discord.gg/5mjUNvb" class="btn btn-default" style="background-color:#000000; color:#fff">Support Server</a>
-      <a href="/botekle" class="btn btn-default" style="background-color:#000000; color:#fff">Add Bot</a>
-      <a href="/sertifika" class="btn btn-default" style="background-color:#000000; color:#fff">Certificate</a>
-      <div class="container">
-  
-	
 
+
+<div class="container">
+<br>
+<h3 align="center" style="color:#ffff"> 
+    <strong>All Bots
+    </strong></h3>
+  <div align="center"><p> <br></p></div>
+  <br>
+  
+  
+  <div align="center">
+    <input type="search" placeholder="Find Bot...." id="ara" name="ara">
+    <br>
+    
+  
+     
+    
+    <p style="color:#4F4F50">
+      <a style="color:red"></a> <br>
+    </p>
+    
+  </div>
+  <br><br><br>
+    
+  <div class="row">
+  
+   <% if (bot.ayar.has('botlar')) { %>
+  <% const sorted = Object.keys(bot.ayar.fetch('botlar')).sort((a, b) => { return (bot.ayar.fetch(`botlar.${b}.oy`) || 0) - (bot.ayar.fetch(`botlar.${a}.oy`) || 0) }) %>
+  <% const top = sorted.splice(0, Object.keys(bot.ayar.fetch('botlar')).length) %>
+  <% const map = top.map(x=>x) %>
+	<% for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) { %>
+  <% let idd = map[i] %>
+    
+   <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
+    
+		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
+    
+    <div class="col-12 col-sm-6 col-md-4">
+      
+        <div class="card card-lg botcard" style="background-color:#4F4F50; width:16rem;"> 
+          
+    <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
+  
+          <a name="aramaResim" id="aramaResim" href="/bot/<%=idd%>" style="color:# 7289DA"><img value="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>" src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" style="width:100%" alt="<%=bot.ayar.fetch(`botlar.${idd}.isim`)%>"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a>
+        
+          <% if(bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
+       
+       <br><a style="color:gold"><img src="https://cdn.discordapp.com/attachments/625306942759501846/626086359962091520/backgrounder_26.jpg" width="30px" height="30px"> ONAYLI</a><br>
+       <% } %>
+       
+                     
+          </div>
+      <div align="center" style="background-color:#4F4F50" class="card-body"> 
+        
+                               <div align="center" class="card-title">
+                                 
+                                  <h4><a style="color:white"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
+                                 
+                                <h6 style="font-size:17px; color:white"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></h6></div>         
+                        
+                              <p class="card-text" style="color:white"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
+                              
+                               <hr>
+                              <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:white; background-color:#4F4F50">View</a> <b style="color:grey">|</b> 
+                              <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:white; background-color:#4F4F50">Invite</a></h6>
+                            </div>
+                       </div><br>
     </div>
-    </div>
-</script>
-  
-  
-<script data-ad-client="ca-pub-3747991797087838" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- test -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3747991797087838"
-     data-ad-slot="7668421393"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+      <% } %>
+    <% } %>
+   <% } %>
+   <% } else {%>
+   <center><h5 style="color:#7289DA">
+     </h5></center>
+   <% } %>
+   </div></div></div></div>
+
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+$(document).ready(function(){
+ $("#ara").keyup(function(){
+    var value = $(this).val().toLowerCase();
+    $(".col-12, .col-sm-6, .col-md-4 .card").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+  //etiket filtresi
+  $("#etiketselect").change(function(){
+    var value = $(this).val();
+    if (value === 'noneFilter') {
+      window.location.reload(true);
+      return
+    }
+    $(".col-12, .col-sm-6, .col-md-4 .card").filter(function(){
+      $(this).toggle($(this).text().indexOf(value) > -1)
+    });
+  })
+  ;
+});
 </script>
   
-  
- 
-  
-  
- 
 <% include ./ek/footer %>
-  
-  
-  
-  
-  
- 

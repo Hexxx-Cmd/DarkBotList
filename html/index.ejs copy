@@ -1,0 +1,46 @@
+<%- include('ek/header', {bot, user, path}) %>
+<div class="container">
+  
+	 <div class="jumbotron">
+		<div align="center">
+			<img src="https://cdn.discordapp.com/attachments/680892879249604665/683026540560384109/Avatar_Link-5.png" width="250px" height="250px" class="d-inline-block align-top rounded-circle" alt=""><br><br>
+      <h3><b>SnowBot List</b></h3>
+      <br>
+    <br> <a href="https://discord.gg/5mjUNvb" class="btn btn-default" style="background-color:#000000; color:#fff">Support Server</a>
+      <a href="/botekle" class="btn btn-default" style="background-color:#000000; color:#fff">Add Bot</a>
+      <a href="/sertifika" class="btn btn-default" style="background-color:#000000; color:#fff">Certificate</a>
+      <div class="container">
+  
+	
+
+    </div>
+    </div>
+</script>
+  
+  
+<script data-ad-client="ca-pub-3747991797087838" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- test -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3747991797087838"
+     data-ad-slot="7668421393"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  
+  
+ 
+  
+  
+ 
+<% include ./ek/footer %>
+  
+  
+  
+  
+  
+ 
