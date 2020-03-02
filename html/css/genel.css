@@ -292,6 +292,110 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   padding:0px 0px 15px;
 }
 
+#warch {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#warch br {
+    display: none;
+}
+
+.mo-slide, .mo-slide2 {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    line-height: 45px;
+    padding: 0;
+    border-radius: 10px;
+    background: #fdfdfd;
+    border: 2px solid #0099cc;
+    margin: 10px;
+    transition: .5s;
+}
+
+.mo-slide2 {
+    border: 2px solid #efa666;
+}
+
+.mo-slide:hover {
+    background-color: #0099cc;
+}
+
+.mo-slide2:hover {
+    background-color: #efa666;
+}
+
+.mo-slide:hover span.circle, .mo-slide2:hover span.circle2 {
+    left: 100%;
+    margin-left: -45px;
+    background-color: #fdfdfd;
+    color: #0099cc;
+}
+
+.mo-slide2:hover span.circle2 {
+    color: #efa666;
+}
+
+.mo-slide:hover span.title, .mo-slide2:hover span.title2 {
+    left: 40px;
+    opacity: 0;
+}
+
+.mo-slide:hover span.title-hover, .mo-slide2:hover span.title-hover2 {
+    opacity: 1;
+    left: 40px;
+}
+
+.mo-slide span.circle, .mo-slide2 span.circle2 {
+    display: block;
+    background-color: #0099cc;
+    color: #fff;
+    position: absolute;
+    float: left;
+    margin: 5px;
+    line-height: 42px;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 50;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+.mo-slide2 span.circle2 {
+    background-color: #efa666;
+}
+
+.mo-slide span.title,
+  .mo-slide span.title-hover, .mo-slide2 span.title2,
+  .mo-slide2 span.title-hover2 {
+    position: absolute;
+    left: 70px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+    color: #30abd5;
+    transition: .5s;
+}
+
+.mo-slide2 span.title2,
+  .mo-slide2 span.title-hover2 {
+    color: #efa666;
+    left: 80px;
+}
+
+.mo-slide span.title-hover, .mo-slide2 span.title-hover2 {
+    left: 80px;
+    opacity: 0;
+}
+
+.mo-slide span.title-hover, .mo-slide2 span.title-hover2 {
+    color: #fff;
+}
+
 .etiket {
   color:white;
   background-color:grey; 
