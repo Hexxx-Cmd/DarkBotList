@@ -4,7 +4,7 @@
                   <br>
                         <div class="post-meta">
                             <div align="center"><span class="yapimci"><i class="fa fa-clock-o"></i> <strong>PRODUCER </strong><%=bot.ayar.fetch(`botlar.${id}.sahip`)%></span><a style="color:#222"> | </a>
-                            <span class="oy"><a class="oy"><i class="fa fa-star"></i> <%=bot.ayar.fetch(`botlar.${id}.oy`) || 0%> OY </a></span>
+                            <span class="oy"><a class="oy"><i class="fa fa-star"></i> <%=bot.ayar.fetch(`botlar.${id}.oy`) || 0%> Voted</a></span>
                         <% if(bot.ayar.has(`botlar.${id}.sertifika`) === true) { %>
                             | <span><img src="https://cdn2.iconfinder.com/data/icons/rewards-1/512/medal-512.png" width="20px" height="20px"> <a style="color:darkorange">Certificate</a></span>
                          <% } %>
@@ -33,7 +33,7 @@
             
           <a href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8"><button class="btn btn-success davetet"><i aria-hiddden="true"></i> Invite</button></a>
         <a href="/bot/<%=id%>/rapor"><button class="btn btn-danger rapor"><i aria-hidden="true"></i>Report</button></a>
-                  <a href="/bot/<%=id%>/oyver"><button id="oy" href="/bot/<%=id%>/oyver" class="btn btn-primary oyver" type="sumbit"><i aria-hidden="true"></i><i class="fa fa-check-circle" aria-hidden="true"></i> Oy Ver</button></a>
+         <a href="/bot/<%=id%>/oyver"><button id="oy" href="/bot/<%=id%>/oyver" class="btn btn-primary oyver" type="sumbit"><i aria-hidden="true"></i><i class="fa fa-check-circle" aria-hidden="true"></i> Vote</button></a>
 
         
           <% if (user) { %>
@@ -45,8 +45,6 @@
                       
  
   <br></div>
-          <a href="/bot/<%=id%>/oyver"><button id="oy" href="/bot/<%=id%>/oyver" class="btn btn-primary oyver" type="sumbit"><i aria-hidden="true"></i><i class="fa fa-check-circle" aria-hidden="true"></i> Oy Ver</button></a>
-
         
         </div><br>
           <div class="post-actions">
