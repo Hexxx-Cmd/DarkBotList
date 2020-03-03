@@ -392,10 +392,10 @@ db.set(`botlar.${ID}.destek`, ayar['botdestek'])
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`✔️ | \`${req.user.username}#${req.user.discriminator}\` ADLI KULLANICININ \`${sistem.username}#${sistem.discriminator}\` ADLI PROFİLİ/BAŞVUSUNU DÜZENLEDİ`)
+client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark: | \`${req.user.username}#${req.user.discriminator}\` User \`${sistem.username}#${sistem.discriminator}\` FORENSIC PROFILE / REGISTERED THE APPLICATION`)
 
 if (client.users.has(req.user.id) === true) {
-client.users.get(req.user.id).send(`✔️ | \`${sistem.username}#${sistem.discriminator}\` ADLI KULLANICI PROFİLİNİ/BAŞVURUSUNU DÜZENLEDİ`)
+client.users.get(req.user.id).send(`:white_check_mark: | \`${sistem.username}#${sistem.discriminator}\` ORGANIZED USER'S PROFILE / APPLICATION`)
 }
 
 }})
