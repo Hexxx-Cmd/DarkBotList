@@ -2,20 +2,21 @@
 <html lang="tr">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="msapplication-TileColor" content="#7289DA">
-<meta name="msapplication-TileImage" content="<%=bot.user.avatarURL%>">
-<meta name="theme-color" content="#7289DA">
+  <meta name="msapplication-TileColor" content="#00a1ff">
+<meta name="msapplication-TileImage" content="https://i.postimg.cc/qvMr4HL8/xirfavicon.png">
+<meta name="theme-color" content="#D49818">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="">
-<meta name="keywords" content="bot, add, Discord Developers, discord, English, Arabic">
-<meta property="og:title" content="Snow Bots" />
+<meta name="description" content="Yerli-Yabancı Discord botlarının eklenildiği ve Discord botunuzu geliştirmeye yarayacak içeriklerin bulunduğu Discord developer platformu Kurallara uymayan ve discord sunucumuzdan banlanan kullanıcıların botları eklenmeyecektir.">
+<meta name="keywords" content="xir,xirbot,xirwebsite,xirbotadd,xirbotekle,botekle,bot, botlar, sunucu, discord, botlar Türkiye, Türkiye">
+<meta property="og:title" content="XiR Bots" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="" />
-<meta property="og:description" content="" />
+<meta property="og:url" content="https://xirbot.glitch.me" />
+<meta property="og:description" content="Yerli-Yabancı Discord botlarının eklenildiği ve Discord botunuzu geliştirmeye yarayacak içeriklerin bulunduğu Discord developer platformu Kurallara uymayan ve discord sunucumuzdan banlanan kullanıcıların botları eklenmeyecektir." />
 <meta property="og:image" content="<%=bot.user.avatarURL%>" />
-<meta property="og:site_name" content="Snow Bots">
-<meta itemprop="description" content="">
-<meta itemprop="image" content="<%=bot.user.avatarURL%>">
+<meta property="og:site_name" content="XiR Bots">
+<meta itemprop="name" content="XiR Bots Add">
+<meta itemprop="description" content="Yerli-Yabancı Discord botlarının eklenildiği ve Discord botunuzu geliştirmeye yarayacak içeriklerin bulunduğu Discord developer platformu Kurallara uymayan ve discord sunucumuzdan banlanan kullanıcıların botları eklenmeyecektir.">
+<meta itemprop="image" content="https://i.postimg.cc/qvMr4HL8/xirfavicon.png">
 
   <meta charset="UTF-8">
 
@@ -38,8 +39,8 @@
   
   <link rel="stylesheet" href="/css/genel.css" />
 
-	<link rel="icon" href="<%=bot.user.IconURL%>">
-	<title>DBL</title>
+	<link rel="icon" href="https://i.postimg.cc/qvMr4HL8/xirfavicon.png">
+	<title>SnowBots List</title>
   <style>
     .cities {
     background-color: black;
@@ -137,31 +138,80 @@
   <body>
     
      <a id="top" name="top"></a>
- 
 <div class="topnav" id="myTopnav">
-			<a href="/">Home Page</a>
-     <!--- <a href="/botlar">Bots</a> --->
-			<% if (!user) { %>
-      <a href="/giris">Login</a>
-      <% } else { %>
-      <a href="/botekle">Add Your Bot</a>
-			<a href="/yetkili">soon</a>
-      <a href="/hakkimizda">About Us</a>
-      <a href="/sertifika">Certificate</a>
-      <!--<a href="#">Soon</a>-->
-			<a href="/kullanici/<%=user.id%>">
-       
-        <%=user.username%>
       
-
-      </a>
+			<a href="/" class="active as"><i class="fa fa-home" aria-hidden="true"></i> Home Page</a>
+      <a href="/botlar" class="as" ><i class="fa fa-android" aria-hidden="true"></i> Bot List</a>
+      <a href="/sertifika" class="as"><i class="fa fa-diamond" aria-hidden="true"></i> Certificate</a>
+			<a href="/hakkimizda"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
+			<% if (!user) { %>
+      <a href="/giris"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></div>
+      <% } else { %>
+      <a href="/botekle"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Bot</a>
       <% if (bot.yetkililer.includes(user.id) === true) { %>
-      <a href="/cikis">Log Out</a>
+      <a href="/yetkili"><i class="fa fa-lock" aria-hidden="true"></i> Admin Panel</a>
+      <a href="/kullanici/<%=user.id%>">
+      <img src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png?size=32" width="25" height="25" class="d-inline-block align-middle rounded-circle" alt="Kullanıcı Avatar">
+      <%=user.username%>
+      </a>
+  <a href="/cikis"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+
       <% } %>
       <% } %>	
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 			</a>
 		</div>
- 
-  <div class="container">
+</html>
+
+ <style>
+.header-image{
+ display: block;
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    width: 120px;
+   }
+.hss a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 13px 14px;
+	text-decoration: none;
+	font-size: 14px;
+}
+@keyframes xir-logo-animasyon {
+    16.65% {
+        transform: translateX(8px);
+    }
+
+    33.3% {
+        transform: translateX(-6px);
+    }
+
+    49.95% {
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+.header-image:hover{
+        animation-name: xir-logo-animasyon;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+   }
+</style>
+<div class="container"></div>
