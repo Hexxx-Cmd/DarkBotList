@@ -3,10 +3,13 @@
 <div class="container">
 <br>
 <h3 align="center" style="color:white">
-    <strong>Botlar
+    <strong>Bot List
     </strong></h3>
-  <div align="center"><p>Burada sistemdeki tüm botlar yer almaktadır. <br>(Botlar oy sayısına göre orantılı olarak sıralanmaktadır.)</p></div>
   <br>
+  
+   <div align="center">
+    <input type="search" placeholder="Find Bot...." id="ara" name="ara">
+    <br>
     
   <div align="center">
 
@@ -47,11 +50,11 @@
                               <p class="card-text" style="color:#222"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
                               <span id="etiketler"><%=bot.ayar.fetch(`botlar.${idd}.etiket`).join(' | ')%></span>
                                <hr>
-        <h6 align="center"><div class="button_slide slide_right"><a href="/bot/<%=idd%>" style="font-size:20px; text-decoration:none; color:#23272A; "><i class="fa fa-eye" aria-hidden="true"></i> Görüntüle</a></div>
+        <h6 align="center"><div class="button_slide slide_right"><a href="/bot/<%=idd%>" style="font-size:20px; text-decoration:none; color:#23272A; "><i class="fa fa-eye" aria-hidden="true"></i> Veiw</a></div>
                                 <% if (user && bot.ayar.fetch(`botlar.${idd}.sahipid`) !== user.id) { %>
 <br>
 <br>
-          <div class="button_slide slide_right"><a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" target="popup" onclick="window.open('https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8','name','width=400,height=700')" style="font-size:20px; text-decoration:none; color:#23272A;">Davet Et</a></div></h6>
+          <div class="button_slide slide_right"><a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" target="popup" onclick="window.open('https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8','name','width=400,height=700')" style="font-size:20px; text-decoration:none; color:#23272A;">Invite</a></div></h6>
                                 <% } %>
 <br>
 <br>

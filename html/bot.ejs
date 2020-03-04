@@ -28,12 +28,21 @@
                  <a href="<%=bot.ayar.fetch(`botlar.${id}.github`)%>"><button class="btn btn-warning github">GitHub</button></a>
             <%} %>
           </div>
+    <div align="center">                    
+  <% if (!user) { %>
+        <a href="/giris"><button class="notoy">You must login to vote <i class="fa fa-lock"></i></button></a>
+                    <% } else { %>
+        <a href="/bot/<%=id%>/oyver"><button id="oy" href="/bot/<%=id%>/oyver" class="btn btn-primary oyver" type="sumbit"><i aria-hidden="true"></i><i class="fa fa-check-circle" aria-hidden="true"></i> Vote</button></a>
+                      <% } %><br>
+      <br>
+      
+      
       <div align="center">                    
   
             
           <a href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8"><button class="btn btn-success davetet"><i aria-hiddden="true"></i> Invite</button></a>
         <a href="/bot/<%=id%>/rapor"><button class="btn btn-danger rapor"><i aria-hidden="true"></i>Report</button></a>
-         <a href="/bot/<%=id%>/oyver"><button id="oy" href="/bot/<%=id%>/oyver" class="btn btn-primary oyver" type="sumbit"><i aria-hidden="true"></i><i class="fa fa-check-circle" aria-hidden="true"></i> Vote</button></a>
+         
 
         
           <% if (user) { %>
