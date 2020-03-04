@@ -506,11 +506,11 @@ db.set(`botlar.${id}.durum`, 'Onaylı')
 
 res.redirect("/yetkili")
 
-client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | User \`${db.fetch(`botlar.${id}.sahip`)}\` Approved The Bot\`${db.fetch(`botlar.${req.params.botID}.isim`)}\nhttps://xirbot.glitch.me/bot/${db.fetch(`botlar.${id}.id`)}`) 
+client.channels.get(client.ayarlar.kayıt).send(`:white_check_mark:  | User \`${db.fetch(`botlar.${id}.sahip`)}\` Approved The Bot\`${db.fetch(`botlar.${req.params.botID}.isim`)} \nhttps:/snowbotslist.me/bot/${db.fetch(`botlar.${id}.id`)}`) 
 
 
 if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
-client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\`YOUR BOT HAS BEEN APPROVED :tada:`)
+client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`:white_check_mark:  | \`${db.fetch(`botlar.${id}.isim`)}\`  YOUR BOT HAS BEEN APPROVED :tada: \nhttps://snwobotslist.me/bot/${db.fetch(`botlar.${id}.id`)}`)
 }
 
 });
