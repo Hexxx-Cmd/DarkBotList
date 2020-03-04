@@ -12,7 +12,7 @@
 		<div><i aria-hidden="true"></i>Client ID <a style="color:red">*</a></div>
 		<div>
       <input type="text" style="text-align: center;" name="botid" id="botid"
-									placeholder="Örneğin; 509835376857186315" required="required">
+									placeholder="Bot ID; 509835376857186315" required="required">
      </div>
    <br>
 		<div><i aria-hidden="true"></i>Bot Prefix <a style="color:red">*</a></div>
@@ -21,7 +21,7 @@
 									placeholder="x+" required="required">
      </div>
 <br>
-<div><i aria-hidden="true"></i>Bot Sahibi ID <a style="color:red">*</a></div>
+<div><i aria-hidden="true"></i>Bot Owner ID <a style="color:red">*</a></div>
      <input type="text" style="color:lightgrey; text-align: center;" name="sahip" id="sahip"
                   value="<%=user.id%>" disabled>
 <br>
@@ -81,22 +81,22 @@
      <div><i aria-hidden="true"></i>Short Description <a style="color:red">*</a></div>
 		<div>
       <input type="text" style="text-align: center; height:60px" name="kisa-aciklama" id="kisa-aciklama"
-                placeholder="Botunuzun kısa açıklamasını yazınız." maxlength="50" required="required">
+                placeholder="Write a short description of your bot" maxlength="50" required="required">
      </div>
      <br>
-     <div><i aria-hidden="true"></i>Uzun Açıklama <a style="color:red">*</a></div>
+     <div><i aria-hidden="true"></i>Long Description <a style="color:red">*</a></div>
 		<div>
       <textarea style="text-align: center; background-color:#222; hight:150px" name="uzun-aciklama" id="uzun-aciklama"
-                placeholder="Botunuzun uzun açıklamasını yazınız." minlength="50" required="required"></textarea>
+                placeholder="Please write the long description of your bot" minlength="50" required="required"></textarea>
      </div>
      <br>
-     <div><i aria-hidden="true"></i>Etiketler <a style="color:red">*</a></div>
+     <div><i aria-hidden="true"></i>labels <a style="color:red">*</a></div>
      <div>
       <select multiple id="etikett" name="etikett" style="border-radius:4px; background-color:#222; color:#fff">
-        <option value="Moderasyon">Moderasyon</option>
-        <option value="Müzik">Müzik</option>
-        <option value="Ayarlar">Ayarlar</option>
-        <option value="Eğlence">Eğlence</option>
+        <option value="Moderasyon">Moderation</option>
+        <option value="Müzik">Music</option>
+        <option value="Ayarlar">Settings</option>
+        <option value="Eğlence">Entertainment</option>
         <option value="Web Panel">Web Panel</option>
        </select>
        <p>
@@ -104,31 +104,31 @@
        </p>
      </div>
      <br>
-     <div><i aria-hidden="true"></i>Site URL'si</div>
+     <div><i aria-hidden="true"></i>Site URL</div>
 		<div>
       <input type="url" style="text-align: center;" name="botsite" id="botsite"
-                placeholder="Varsa site URL yazınız.">
+                placeholder="If necessary, write the site URL.">
      </div>
      <br>
-     <div><i aria-hidden="true"></i>Github URL'si</div>
+     <div><i aria-hidden="true"></i>Github URL</div>
 		<div>
       <input type="url" style="text-align: center;" name="github" id="github"
-                placeholder="Varsa Github URL yazınız.">
+                placeholder="Type Github URL if available.">
      </div>
      <br>
-     <div><i aria-hidden="true"></i>Destek Sunucusu URL'si</div>
+     <div><i aria-hidden="true"></i>Support Server URL</div>
 		<div>
       <input type="url" style="text-align: center;" name="botdestek" id="botdestek"
-                placeholder="Örnek: https://discord.gg/GkzwCgM">
+                placeholder="Example: https://discord.gg/code">
      </div>
 	
    <br>
    <h6 style="color:red">
-     Yanında Yıldız işareti(<b>*</b>) olanlar zorunlu, olmayanlar ise isteğe bağlıdır.
+     Yanında Yıldız işareti(<b>*</b>) those that are compulsory and those that are not.
    </h6>
 
 				<div style="width: 100%; text-align: center; margin-top: 20px;">
-					<button style="border-radius: 4px;width: 20%;height: 40px;font-size: 15px;background-color:#0959B5;" type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> Başvuruyu Gönder</button>
+					<button style="border-radius: 4px;width: 20%;height: 40px;font-size: 15px;background-color:#0959B5;" type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> Submit Bot</button>
 				</div>
    </div>
 			</form>
